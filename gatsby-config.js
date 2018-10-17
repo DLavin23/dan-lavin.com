@@ -3,7 +3,13 @@ module.exports = {
     title: 'Dan Lavin',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -16,6 +22,9 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
+    'gatsby-plugin-catch-links',
+    'gatsby-transformer-remark',
   ],
 }
