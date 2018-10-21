@@ -1,10 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-
-import Header from './header'
+import Header from './Header'
+import Footer from './Footer'
 import './layout.css'
+import { ThemeProvider } from 'styled-components'
+import theme from '../theme'
+import { StaticQuery, graphql } from 'gatsby'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -28,10 +30,18 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <main>
-          {children}
-        </main>
+        <ThemeProvider theme={theme}>
+          <div>
+            <Header siteTitle={data.site.siteMetadata.title} />
+            {children}
+            <Footer
+              bg="grayLight"
+            >
+              Footer
+            </Footer>
+
+          </div>
+        </ThemeProvider>
       </>
     )}
   />
