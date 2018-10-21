@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Header from './Header'
-import Footer from './Footer'
 import './layout.css'
 import { ThemeProvider } from 'styled-components'
 import theme from '../theme'
