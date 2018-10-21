@@ -32,14 +32,7 @@ const Layout = ({ children }) => (
         </Helmet>
         <ThemeProvider theme={theme}>
           <div>
-            <Header siteTitle={data.site.siteMetadata.title} />
             {children}
-            <Footer
-              bg="grayLight"
-            >
-              Footer
-            </Footer>
-
           </div>
         </ThemeProvider>
       </>
