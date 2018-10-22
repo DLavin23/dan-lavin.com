@@ -30,7 +30,9 @@ const Layout = ({ children }) => (
         </Helmet>
         <ThemeProvider theme={theme}>
           <div>
+            <header>Header</header>
             {children}
+            <footer>Footer</footer>
           </div>
         </ThemeProvider>
       </>
