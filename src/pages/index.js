@@ -1,4 +1,5 @@
 import React from 'react'
+import system from 'system-components'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 
@@ -16,10 +17,17 @@ const getWelcomeMessage = () => {
   }
 }
 
+const HeroHeader = system({
+  is: 'h2',
+  border: '1px solid red',
+  p: 4,
+})
+
+
 const IndexPage = () => (
 
   <Layout>
-    <h2>Good {getWelcomeMessage()}, I'm Dan! I'm Chicago based product manager with a passion for design, development & user experience.</h2>
+    <HeroHeader>Good {getWelcomeMessage()}, I'm Dan! I'm Chicago based product manager with a passion for design, development & user experience.</HeroHeader>
 
     <Link to="/writing/">Check out my writing!</Link>
   </Layout>
