@@ -3,9 +3,16 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import './layout.css'
 import theme from '../theme'
-import Header from './Header'
+import system from 'system-components'
 import { ThemeProvider } from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
+
+const Header = system({
+  is: 'header',
+  borderBottom: '1px solid',
+  borderColor: 'grayLight',
+  p: 3,
+})
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -31,7 +38,9 @@ const Layout = ({ children }) => (
         </Helmet>
         <ThemeProvider theme={theme}>
           <div>
-            <Header siteTitle={data.site.siteMetadata.title} />
+            <Header>
+              {data.site.siteMetadata.title}
+            </Header>
             {children}
           </div>
         </ThemeProvider>

@@ -19,7 +19,6 @@ const getWelcomeMessage = () => {
 
 const HeroHeader = system({
   is: 'h2',
-  border: '1px solid red',
   p: 4,
 })
 
