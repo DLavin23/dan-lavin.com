@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import './layout.css'
-import { ThemeProvider } from 'styled-components'
 import theme from '../theme'
+import Header from './Header'
+import { ThemeProvider } from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 
 const Layout = ({ children }) => (
@@ -30,7 +31,7 @@ const Layout = ({ children }) => (
         </Helmet>
         <ThemeProvider theme={theme}>
           <div>
-            <header>Header</header>
+            <Header siteTitle={data.site.siteMetadata.title} />
             {children}
             <footer>Footer</footer>
           </div>
