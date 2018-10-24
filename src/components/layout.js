@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import './layout.css'
 import theme from '../theme'
 import system from 'system-components'
-import { Header } from './header'
+import Header from './header'
 import { ThemeProvider } from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 
