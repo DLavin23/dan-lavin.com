@@ -4,15 +4,16 @@ import Helmet from 'react-helmet'
 import './layout.css'
 import theme from '../theme'
 import system from 'system-components'
+import { Header } from './Header'
 import { ThemeProvider } from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 
-const Header = system({
-  is: 'header',
-  borderBottom: '1px solid',
-  borderColor: 'grayLight',
-  p: 3,
-})
+// const Header = system({
+//   is: 'header',
+//   borderBottom: '1px solid',
+//   borderColor: 'grayLight',
+//   p: 3,
+// })
 
 const Main = system({
   is: 'main',
@@ -51,9 +52,7 @@ const Layout = ({ children }) => (
         </Helmet>
         <ThemeProvider theme={theme}>
           <div>
-            <Header>
-              {data.site.siteMetadata.title}
-            </Header>
+            <Header siteTitle={data.site.siteMetadata.title} />
             <Main>
               {children}
             </Main>

@@ -2,7 +2,7 @@ import React from 'react'
 import system from 'system-components'
 import { Link } from 'gatsby'
 
-const Header = system({
+const UIHeader = system({
   is: 'header',
   borderBottom: '1px solid',
   borderColor: 'grayLight',
@@ -15,7 +15,7 @@ const Logo = system({
 })
 
 const Header = ({ siteTitle }) => (
-  <header>
+  <UIHeader>
     <Logo>
       <Link
         to="/"
@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => (
         {siteTitle}
       </Link>
     </Logo>
-  </header>
+  </UIHeader>
 )
 
-export default Header
+export { Header }
