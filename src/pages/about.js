@@ -3,7 +3,37 @@ import Layout from '../components/layout'
 
 const About = () => (
   <Layout>
-    <h2>About</h2>
+    <h2>Currently, I lead product at Hatch Loyalty, where we're focused on building a platform that helps businesses build stronger relationships with their customers.</h2>
+    <h3>About Me</h3>
+    <p>I love products that solve real problems. I enjoy design that is both simple and intuitive. I believe that talking to actual customers is the best way to make sure you're building the right product. I embrace change. Failure happens from time to time. That's OK, as long as you learn from your mistakes. I value strong communication. It's impossible to build a great product if design, engineering, and the business are not working as one team. Finally, I approach every problem with an "empty cup" and a "beginners mind".</p>
+    <h3>Stuff I'm passionate about:</h3>
+    <ul>
+      <li>Building digital products that solve real problems</li>
+      <li>Leading product and engineering teams</li>
+      <li>Listening to customers</li>
+      <li>Focusing on outcomes</li>
+      <li>Design Systems</li>
+    </ul>
+
+    <h3>Stuff I know how to do:</h3>
+    <ul>
+      <li>Product Management</li>
+      <li>Product Design</li>
+      <li>User Experience</li>
+      <li>Prototyping</li>
+      <li>Javascript</li>
+      <li>HTML</li>
+      <li>CSS</li>
+    </ul>
+
+    <h3>Stuff I'm trying to improve:</h3>
+    <ul>
+      <li>Functional Programming</li>
+      <li>React and React Native</li>
+      <li>UI and Visual Design</li>
+      <li>Systems Thinking</li>
+      <li>Writing</li>
+    </ul>
   </Layout>
 )
 

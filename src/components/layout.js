@@ -14,6 +14,19 @@ const Header = system({
   p: 3,
 })
 
+const Main = system({
+  is: 'main',
+  mx: 'auto',
+  maxWidth: '1024px',
+})
+
+const Footer = system({
+  is: 'footer',
+  border: '1px solid',
+  borderColor: 'grayLight',
+  p: 3,
+})
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -41,7 +54,12 @@ const Layout = ({ children }) => (
             <Header>
               {data.site.siteMetadata.title}
             </Header>
-            {children}
+            <Main>
+              {children}
+            </Main>
+            <Footer>
+              Footer
+            </Footer>
           </div>
         </ThemeProvider>
       </>
