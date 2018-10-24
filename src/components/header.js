@@ -26,4 +26,4 @@ const Header = ({ siteTitle }) => (
   </UIHeader>
 )
 
-export { Header }
+export default Header
