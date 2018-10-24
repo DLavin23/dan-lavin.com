@@ -1,7 +1,8 @@
 import React from 'react'
 import system from 'system-components'
-import { Link } from 'gatsby'
 import Layout from '../components/layout'
+import { Link } from 'gatsby'
+import { Button } from '../components/Button'
 
 // move to seperate file
 const getWelcomeMessage = () => {
@@ -29,6 +30,7 @@ const IndexPage = () => (
     <HeroHeader>Good {getWelcomeMessage()}, I'm Dan! I'm Chicago based product manager with a passion for design, development & user experience.</HeroHeader>
 
     <Link to="/writing/">Check out my writing!</Link>
+    <Button>Primary</Button>
   </Layout>
 )
 
