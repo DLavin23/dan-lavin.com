@@ -1,6 +1,6 @@
 import React from 'react'
 import system from 'system-components'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import { Link } from 'gatsby'
 import { Button } from '../components/Button'
 
