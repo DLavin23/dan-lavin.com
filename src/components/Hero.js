@@ -1,4 +1,3 @@
-import React from 'react'
 import system from 'system-components'
 
 const Hero = system({
@@ -9,13 +8,5 @@ const Hero = system({
   'color',
   'space',
 )
-
-const HeroHeadline = ({ children }) => {
-  return (
-    <Hero>
-      {children}
-    </Hero>
-  )
-}
 
 export default Hero
