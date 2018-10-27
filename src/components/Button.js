@@ -10,4 +10,4 @@ const Button = system({
   py: 2,
 })
 
-export { Button }
+export default Button

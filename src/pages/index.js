@@ -1,8 +1,11 @@
 import React from 'react'
-import system from 'system-components'
 import Layout from '../components/layout'
-import { Link } from 'gatsby'
-import { Button } from '../components/Button'
+import Hero from '../components/Hero'
+import HeroHeadline from '../components/HeroHeadline'
+import HeroSubHeadline from '../components/HeroSubHeadline'
+import Section from '../components/Section'
+import SectionHeader from '../components/SectionHeader'
+// import { Link } from 'gatsby'
 
 // move to seperate file
 const getWelcomeMessage = () => {
@@ -18,19 +21,27 @@ const getWelcomeMessage = () => {
   }
 }
 
-const HeroHeader = system({
-  is: 'h2',
-  p: 4,
-})
-
 
 const IndexPage = () => (
-
   <Layout>
-    <HeroHeader>Good {getWelcomeMessage()}, I'm Dan! I'm Chicago based product manager with a passion for design, development & user experience.</HeroHeader>
+    <Hero>
+      <HeroHeadline>Good {getWelcomeMessage()}!</HeroHeadline>
+      <HeroSubHeadline>I'm Dan, a Chicago based product leader with a passion for design, development &amp; user experience.</HeroSubHeadline>
+    </Hero>
 
-    <Link to="/writing/">Check out my writing!</Link>
-    <Button>Primary</Button>
+    <Section>
+      <SectionHeader title="Experience" />
+      <p>Product Management</p>
+      <p>Everything starts with the customer, without them, there is no product. I work collaboratively with everyone in the company to come up with creative solutions to real problems. Communication and empathy are keys to success.</p>
+      <p>Web Development</p>
+      <p>Performance is design. A great product should load fast and work as intended regardless of device or screen size. Thoughtful architecture and modular components are the key to writing scalable and maintainable code. Functional CSS is my jam.</p>
+      <p>Product Design</p>
+      <p>Good design is simple, intuitive, and solves real problems. My process starts with research. I believe in talking to real customers, designing with content, and building prototypes with HTML and CSS. Design systems and pattern libraries FTW!</p>
+    </Section>
+
+    <Section>
+      <SectionHeader title="Writing" />
+    </Section>
   </Layout>
 )
 

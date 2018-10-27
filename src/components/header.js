@@ -20,60 +20,41 @@ const Logo = system({
   width: '25%'
 })
 
-const LogoLink = system({
-  is: Link,
-  color: 'blue',
-},
-  {
-    textDecoration: 'none',
-  }
-)
-
 // TODO: refactor and move to separate component
 const Nav = system({
   is: 'nav',
   display: 'flex',
 })
 
-const NavLink = system({
-  is: Link,
-  fontSize: 2,
-  px: 2,
-},
-  {
-    textDecoration: 'none',
-  }
-)
-
 const Header = ({ siteTitle }) => (
   <UIHeader>
     <Logo>
-      <LogoLink
+      <Link
         to="/"
         activeStyle={{
           textDecoration: 'underline'
         }}
       >
         {siteTitle}
-      </LogoLink>
+      </Link>
     </Logo>
     <Nav>
-      <NavLink
+      <Link
         to="/about"
         activeStyle={{
           textDecoration: 'underline'
         }}
       >
         About
-      </NavLink>
-      <NavLink
+      </Link>
+      <Link
         to="/writing"
         activeStyle={{
           textDecoration: 'underline'
         }}
       >
         Writing
-      </NavLink>
+      </Link>
     </Nav>
   </UIHeader>
 )

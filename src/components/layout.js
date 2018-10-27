@@ -5,15 +5,9 @@ import './layout.css'
 import theme from '../theme'
 import system from 'system-components'
 import Header from './header'
+import Footer from './footer'
 import { ThemeProvider } from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
-
-// const Header = system({
-//   is: 'header',
-//   borderBottom: '1px solid',
-//   borderColor: 'grayLight',
-//   p: 3,
-// })
 
 const Main = system({
   is: 'main',
@@ -21,12 +15,7 @@ const Main = system({
   maxWidth: '1024px',
 })
 
-const Footer = system({
-  is: 'footer',
-  border: '1px solid',
-  borderColor: 'grayLight',
-  p: 3,
-})
+
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -56,9 +45,7 @@ const Layout = ({ children }) => (
             <Main>
               {children}
             </Main>
-            <Footer>
-              Footer
-            </Footer>
+            <Footer />
           </div>
         </ThemeProvider>
       </>
