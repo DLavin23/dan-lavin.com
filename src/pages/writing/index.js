@@ -1,16 +1,18 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Hero from '../../components/Hero'
+import Section from '../../components/Section'
+import SectionHeader from '../../components/SectionHeader'
 import Layout from "../../components/layout"
 
 export default ({ data }) => {
   return (
     <Layout>
-      <div>
-        <h1>
-          My Awesome list of Random Thoughts
-        </h1>
-        <Link to="/">Go back to the homepage</Link>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+      <Hero>
+        <h2>My Awesome list of Random Thoughts</h2>
+      </Hero>
+      <Section>
+        <SectionHeader title="Posts" />
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link
@@ -26,7 +28,7 @@ export default ({ data }) => {
             </Link>
           </div>
         ))}
-      </div>
+      </Section>
     </Layout>
   )
 }

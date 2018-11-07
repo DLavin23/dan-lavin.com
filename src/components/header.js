@@ -1,4 +1,5 @@
 import React from 'react'
+import { themeGet } from 'styled-system'
 import system from 'system-components'
 import Box from './Box'
 import Wrapper from './Wrapper'
@@ -20,11 +21,29 @@ const Logo = system({
   width: '25%'
 })
 
-const UINavLink = system({
+const LogoLink = system({
   is: Link,
-  display: 'flex',
   alignItems: 'center',
+  color: 'offBlack',
+  display: 'flex',
+  fontWeight: '700',
 })
+
+const UINavLink = system(
+{
+  is: Link,
+  color: 'grayDark',
+  fontSize: 3,
+  px: 2,
+},
+  props => ({
+    cursor: 'pointer',
+    textDecoration: 'none',
+    '&:hover': {
+      color: themeGet('colors.blue')(props),
+    },
+  })
+)
 
 // TODO: refactor and move to separate component
 const Nav = system({
@@ -36,33 +55,33 @@ const Header = ({ siteTitle }) => (
   <UIHeader>
     <Wrapper>
       <Logo>
-        <UINavLink
+        <LogoLink
           to="/"
           activeStyle={{
             textDecoration: 'none'
           }}
         >
-          <AtSign size={20}/>
+          <AtSign size={20} color="#999" />
           <Box is="span" px={1}>{siteTitle}</Box>
-        </UINavLink>
+        </LogoLink>
       </Logo>
       <Nav>
-        <Link
+        <UINavLink
           to="/about"
           activeStyle={{
-            textDecoration: 'none'
+            textDecoration: 'underline'
           }}
         >
           About
-        </Link>
-        <Link
+        </UINavLink>
+        <UINavLink
           to="/writing"
           activeStyle={{
-            textDecoration: 'none'
+            textDecoration: 'underline'
           }}
         >
           Writing
-        </Link>
+        </UINavLink>
       </Nav>
     </Wrapper>
   </UIHeader>
