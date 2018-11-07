@@ -16,10 +16,15 @@ const UIHeader = system({
 const Logo = system({
   is: 'h1',
   m: 0,
-  fontSize: 2,
+  fontSize: 4,
   width: '25%'
 })
 
+const UINavLink = system({
+  is: Link,
+  display: 'flex',
+  alignItems: 'center',
+})
 
 // TODO: refactor and move to separate component
 const Nav = system({
@@ -31,17 +36,15 @@ const Header = ({ siteTitle }) => (
   <UIHeader>
     <Wrapper>
       <Logo>
-        <Link
+        <UINavLink
           to="/"
           activeStyle={{
             textDecoration: 'none'
           }}
         >
-          <Box display="flex" alignItems="center">
-            <AtSign />
-            {siteTitle}
-          </Box>
-        </Link>
+          <AtSign size={20}/>
+          <Box is="span" px={1}>{siteTitle}</Box>
+        </UINavLink>
       </Logo>
       <Nav>
         <Link
