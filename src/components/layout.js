@@ -12,7 +12,8 @@ import { StaticQuery, graphql } from 'gatsby'
 const Main = system({
   is: 'main',
   mx: 'auto',
-  maxWidth: '1024px',
+  px: [2, 4],
+  maxWidth: '960px',
 })
 
 
