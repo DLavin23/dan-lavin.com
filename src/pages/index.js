@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import Hero from '../components/Hero'
+import Highlight from '../components/Highlight'
 import HeroHeadline from '../components/HeroHeadline'
 import HeroSubHeadline from '../components/HeroSubHeadline'
 import Section from '../components/Section'
@@ -25,8 +26,12 @@ const getWelcomeMessage = () => {
 const IndexPage = () => (
   <Layout>
     <Hero>
-      <HeroHeadline>Good {getWelcomeMessage()}!</HeroHeadline>
-      <HeroSubHeadline>I'm Dan, a Chicago based product leader with a passion for design, development &amp; user experience.</HeroSubHeadline>
+      <HeroHeadline>
+        Good {getWelcomeMessage()}!
+      </HeroHeadline>
+      <HeroSubHeadline>
+        I'm Dan, a Chicago based <Highlight>product</Highlight> leader with a passion for design, development &amp; user experience.
+      </HeroSubHeadline>
     </Hero>
 
     <Section>

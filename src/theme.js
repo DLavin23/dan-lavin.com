@@ -55,6 +55,12 @@ export default {
     normal: 400,
     bold: 600,
   },
+  textStyles: {
+    caps: {
+      textTransform: 'uppercase',
+      letterSpacing: '0.2em'
+    }
+  },
   lineHeight: '1.5',
   listTypes: ['none', 'disc'],
   shadows: [
