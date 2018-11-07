@@ -1,6 +1,7 @@
 import React from 'react'
 import system from 'system-components'
 import Box from './Box'
+import Wrapper from './Wrapper'
 import { Link } from 'gatsby'
 import { AtSign } from 'react-feather'
 
@@ -12,22 +13,13 @@ const UIHeader = system({
   w: 1,
 })
 
-const Wrapper = system({
-  is: 'div',
-  alignItems: 'center',
-  display: 'flex',
-  justifyContent: 'space-between',
-  mx: 'auto',
-  px: [2,4],
-  maxWidth: '960px'
-})
-
 const Logo = system({
   is: 'h1',
   m: 0,
   fontSize: 2,
   width: '25%'
 })
+
 
 // TODO: refactor and move to separate component
 const Nav = system({

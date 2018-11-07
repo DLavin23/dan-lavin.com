@@ -1,13 +1,12 @@
 import React from 'react'
 import system from 'system-components'
+import Wrapper from './Wrapper'
 import { GitHub, Linkedin, Codepen, Twitter, Instagram } from 'react-feather'
 
 const UIFooter = system({
   is: 'footer',
   borderTop: '1px solid',
   borderColor: 'grayLight',
-  display: 'flex',
-  justifyContent: 'space-between',
   p: 3,
   width: '100%',
 })
@@ -88,10 +87,12 @@ const renderContactLinks = () => {
 
 const Footer = () => (
   <UIFooter>
-    <FooterGreeting>&copy;{new Date().getFullYear()} Happy {HumanReadableDay()}!</FooterGreeting>
-    <FooterList>
-      {renderContactLinks()}
-    </FooterList>
+    <Wrapper>
+      <FooterGreeting>&copy;{new Date().getFullYear()} Happy {HumanReadableDay()}!</FooterGreeting>
+      <FooterList>
+        {renderContactLinks()}
+      </FooterList>
+    </Wrapper>
   </UIFooter>
 )
 

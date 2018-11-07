@@ -1,11 +1,13 @@
 import React from 'react'
 import Layout from '../components/layout'
+import Box from '../components/Box'
 import Hero from '../components/Hero'
 import Highlight from '../components/Highlight'
 import HeroHeadline from '../components/HeroHeadline'
 import HeroSubHeadline from '../components/HeroSubHeadline'
 import Section from '../components/Section'
 import SectionHeader from '../components/SectionHeader'
+import { Sunrise, Sun, Moon} from 'react-feather'
 // import { Link } from 'gatsby'
 
 // move to seperate file
@@ -13,12 +15,40 @@ const getWelcomeMessage = () => {
   const currentDate = new Date()
   const currentHour = currentDate.getHours()
   if (currentHour >= 0 && currentHour < 12) {
-    return 'Morning'
+    return (
+      <Box
+        is="div"
+        alignItems="center"
+        display="flex"
+      >
+        <Sunrise />
+        <Box is="span" px={2}>Good Morning!</Box>
+      </Box>
+    )
+
   }
   if (currentHour >= 12 && currentHour < 17) {
-    return 'Afternoon'
+    return (
+      <Box
+        is="div"
+        alignItems="center"
+        display="flex"
+      >
+        <Sun />
+        <Box is="span" px={2}>Good Afternoon!</Box>
+      </Box>
+    )
   } else {
-    return 'Evening'
+    return (
+      <Box
+        is="div"
+        alignItems="center"
+        display="flex"
+      >
+        <Moon />
+        <Box is="span" px={2}>Good Evening!</Box>
+      </Box>
+    )
   }
 }
 
@@ -27,7 +57,7 @@ const IndexPage = () => (
   <Layout>
     <Hero>
       <HeroHeadline>
-        Good {getWelcomeMessage()}!
+        {getWelcomeMessage()}
       </HeroHeadline>
       <HeroSubHeadline>
         I'm Dan, a Chicago based <Highlight>product</Highlight> leader with a passion for design, development &amp; user experience.
