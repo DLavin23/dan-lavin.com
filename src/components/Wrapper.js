@@ -5,9 +5,9 @@ const Wrapper = system({
   alignItems: 'center',
   display: 'flex',
   justifyContent: 'space-between',
-  mx: 'auto',
+  // mx: 'auto',
   px: [2,4],
-  maxWidth: '960px'
+  maxWidth: '100%'
 })
 
 export default Wrapper

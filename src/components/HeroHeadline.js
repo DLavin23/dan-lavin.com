@@ -8,10 +8,14 @@ const Header = system({
 const Headline = system({
   is: 'h2',
   color: 'offBlack',
-  fontSize: 3,
+  fontSize: 6,
   m: 0,
   pb: 3,
-})
+},
+ {
+   lineHeight: '1.25'
+ }
+)
 
 const HeroHeadline = ({ children }) => {
   return (

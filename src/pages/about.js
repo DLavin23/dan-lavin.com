@@ -43,8 +43,8 @@ const About = () => (
     <h3>Stuff I know how to do:</h3>
     <ul>
       <li>Product Management</li>
-      <li>Product Design</li>
       <li>User Experience</li>
+      <li>Product Design</li>
       <li>Prototyping</li>
       <li>Javascript</li>
       <li>HTML</li>

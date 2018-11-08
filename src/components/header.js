@@ -10,7 +10,7 @@ const UIHeader = system({
   is: 'header',
   borderBottom: '1px solid',
   borderColor: 'grayLight',
-  py: 3,
+  p: 3,
   w: 1,
 })
 
@@ -75,12 +75,20 @@ const Header = ({ siteTitle }) => (
           About
         </UINavLink>
         <UINavLink
-          to="/writing"
+          to="/journal"
           activeStyle={{
             textDecoration: 'underline'
           }}
         >
-          Writing
+          Journal
+        </UINavLink>
+        <UINavLink
+          to="/reading"
+          activeStyle={{
+            textDecoration: 'underline'
+          }}
+        >
+          Reading
         </UINavLink>
       </Nav>
     </Wrapper>
