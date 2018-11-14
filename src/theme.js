@@ -24,7 +24,7 @@ const fontSizes = [10, 12, 14, 16, 20, 24, 32, 48, 64, 72, 96]
 
 export default {
   borders: [0, '1px solid', '2px solid'],
-  breakpoints: ['960px', '1200px', '1400px'],
+  breakpoints: ['900px'],
   colors,
   colorStyles: {
     default: {

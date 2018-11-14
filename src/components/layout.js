@@ -11,12 +11,12 @@ import { StaticQuery, graphql } from 'gatsby'
 
 const Main = system({
   is: 'main',
-  // mx: 'auto',
-  px: [2, 4],
-  maxWidth: '800px',
+  px: [3,4],
 })
 
-
+// const PageWrapper = system({
+//   is: 'div',
+// })
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -34,8 +34,8 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'The Personal site of Dan Lavin' },
+            { name: 'keywords', content: 'dan, lavin, dan lavin, product, product management, design, product design,' },
           ]}
         >
           <html lang="en" />
@@ -43,10 +43,10 @@ const Layout = ({ children }) => (
         <ThemeProvider theme={theme}>
           <div>
             <Header siteTitle={data.site.siteMetadata.title} />
-            <Main>
-              {children}
-            </Main>
-            <Footer />
+              <Main>
+                {children}
+              </Main>
+              <Footer />
           </div>
         </ThemeProvider>
       </>

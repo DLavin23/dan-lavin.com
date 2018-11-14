@@ -1,6 +1,9 @@
 import React from 'react'
+import { graphql } from "gatsby"
+import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Box from '../components/Box'
+import ContactLinks from '../components/ContactLinks'
 import Hero from '../components/Hero'
 import Highlight from '../components/Highlight'
 import HeroHeadline from '../components/HeroHeadline'
@@ -22,7 +25,7 @@ const getWelcomeMessage = () => {
         display="flex"
       >
         <Sunrise />
-        <Box is="span" px={2}>Good Morning!</Box>
+        <Box is="span" px={2}>Good Morning, I'm Dan!</Box>
       </Box>
     )
 
@@ -35,7 +38,7 @@ const getWelcomeMessage = () => {
         display="flex"
       >
         <Sun />
-        <Box is="span" px={2}>Good Afternoon!</Box>
+        <Box is="span" px={2}>Good Afternoon, I'm Dan!</Box>
       </Box>
     )
   } else {
@@ -46,7 +49,7 @@ const getWelcomeMessage = () => {
         display="flex"
       >
         <Moon />
-        <Box is="span" px={2}>Good Evening!</Box>
+        <Box is="span" px={2}>Good Evening, I'm Dan!</Box>
       </Box>
     )
   }
@@ -59,17 +62,19 @@ export default ({ data }) => {
         <Text
           is="h4"
           color="offBlack"
-          fontSize={3}
+          fontSize={[3,4]}
           mb={2}
         >
           {getWelcomeMessage()}
         </Text>
         <HeroHeadline>
-          I'm Dan, a <Highlight>product</Highlight> leader with a passion for design, development &amp; user experience.
+          A <Highlight>product</Highlight> leader with a passion for design, development &amp; user experience.
         </HeroHeadline>
-        <Text fontSize="4" color="gray">
-          Currently, I lead product at Hatch Loyalty, where we're focused on building a platform to help businesses create stronger, more personalized relationships with their customers.
+        <Text fontSize={[4,5]} color="grayDark" mb={3}>
+          Currently, I lead product at Hatch, Where we're focused on building a platform to help businesses create stronger, more personalized relationships with their customers.
         </Text>
+        <p>check out the slightly longer version <Link to="/about">here.</Link></p>
+        <ContactLinks />
       </Hero>
 
       <Section>
@@ -99,7 +104,7 @@ export default ({ data }) => {
                   fontWeight="400">
                   {node.frontmatter.title}{" "}
                 </Text>
-                {/* <p>{node.excerpt}</p> */}
+                <p>{node.excerpt}</p>
               </UILink>
             </Box>
           ))}
@@ -110,8 +115,10 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 3
+    ) {
       edges {
         node {
           id

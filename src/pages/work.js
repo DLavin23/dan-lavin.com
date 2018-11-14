@@ -14,9 +14,6 @@ const Work = () => (
     </Hero>
     <Section>
       <SectionHeader title="Work" />
-      <ul>
-
-      </ul>
     </Section>
   </Layout>
 )

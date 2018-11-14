@@ -8,9 +8,9 @@ import { AtSign } from 'react-feather'
 
 const UIHeader = system({
   is: 'header',
-  borderBottom: '1px solid',
-  borderColor: 'grayLight',
-  p: 3,
+  borderTop: '4px solid',
+  borderColor: 'blue',
+  py: 3,
   w: 1,
 })
 
@@ -18,11 +18,11 @@ const Logo = system({
   is: 'h1',
   m: 0,
   fontSize: 4,
-  width: '25%'
+  width: ['auto', '25%']
 })
 
 const LogoLink = system({
-  is: Link,
+  is: 'a',
   alignItems: 'center',
   color: 'offBlack',
   display: 'flex',
@@ -56,10 +56,7 @@ const Header = ({ siteTitle }) => (
     <Wrapper>
       <Logo>
         <LogoLink
-          to="/"
-          activeStyle={{
-            textDecoration: 'none'
-          }}
+          href="/"
         >
           <AtSign size={20} color="#999" />
           <Box is="span" px={1}>{siteTitle}</Box>
@@ -73,6 +70,14 @@ const Header = ({ siteTitle }) => (
           }}
         >
           About
+        </UINavLink>
+        <UINavLink
+          to="/work"
+          activeStyle={{
+            textDecoration: 'underline'
+          }}
+        >
+          Work
         </UINavLink>
         <UINavLink
           to="/journal"
