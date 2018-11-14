@@ -5,8 +5,7 @@ const Wrapper = system({
   alignItems: 'center',
   display: 'flex',
   justifyContent: 'space-between',
-  // mx: 'auto',
-  px: [2,4],
+  px: [3,4],
   maxWidth: '100%'
 })
 
