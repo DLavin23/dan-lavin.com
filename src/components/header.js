@@ -54,48 +54,58 @@ const Nav = system({
 const Header = ({ siteTitle }) => (
   <UIHeader>
     <Wrapper>
-      <Logo>
-        <LogoLink
-          href="/"
-        >
-          <AtSign size={20} color="#999" />
-          <Box is="span" px={1}>{siteTitle}</Box>
-        </LogoLink>
-      </Logo>
-      <Nav>
-        <UINavLink
-          to="/about"
-          activeStyle={{
-            textDecoration: 'underline'
-          }}
-        >
-          About
-        </UINavLink>
-        <UINavLink
-          to="/work"
-          activeStyle={{
-            textDecoration: 'underline'
-          }}
-        >
-          Work
-        </UINavLink>
-        <UINavLink
-          to="/journal"
-          activeStyle={{
-            textDecoration: 'underline'
-          }}
-        >
-          Journal
-        </UINavLink>
-        <UINavLink
-          to="/reading"
-          activeStyle={{
-            textDecoration: 'underline'
-          }}
-        >
-          Reading
-        </UINavLink>
-      </Nav>
+      <Box display="flex" alignItems="center" justifyContent="space-between">
+        <Logo>
+          <LogoLink
+            href="/"
+          >
+            <AtSign size={20} color="#999" />
+            <Box is="span" px={1}>{siteTitle}</Box>
+          </LogoLink>
+        </Logo>
+        <Nav>
+          <UINavLink
+            to="/about"
+            activeStyle={{
+              textDecoration: 'underline'
+            }}
+          >
+            About
+          </UINavLink>
+          <UINavLink
+            to="/principles"
+            activeStyle={{
+              textDecoration: 'underline'
+            }}
+          >
+            Principles
+          </UINavLink>
+          <UINavLink
+            to="/work"
+            activeStyle={{
+              textDecoration: 'underline'
+            }}
+          >
+            Work
+          </UINavLink>
+          <UINavLink
+            to="/journal"
+            activeStyle={{
+              textDecoration: 'underline'
+            }}
+          >
+            Journal
+          </UINavLink>
+          <UINavLink
+            to="/reading"
+            activeStyle={{
+              textDecoration: 'underline'
+            }}
+          >
+            Reading
+          </UINavLink>
+        </Nav>
+      </Box>
     </Wrapper>
   </UIHeader>
 )

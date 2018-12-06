@@ -5,6 +5,7 @@ const Box = system(
   'border',
   'borderColor',
   'borderBottom',
+  'borderRadius',
   'color',
   'display',
   'justifyContent',

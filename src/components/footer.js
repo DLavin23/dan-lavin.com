@@ -1,5 +1,6 @@
 import React from 'react'
 import system from 'system-components'
+import Box from './Box'
 import Wrapper from './Wrapper'
 import ContactLinks from './ContactLinks'
 
@@ -23,8 +24,10 @@ function HumanReadableDay() {
 const Footer = () => (
   <UIFooter>
     <Wrapper>
-      <FooterGreeting>&copy;{new Date().getFullYear()} Happy {HumanReadableDay()}!</FooterGreeting>
-      <ContactLinks />
+      <Box display="flex" alignItems="center" justifyContent="space-between">
+        <FooterGreeting>&copy;{new Date().getFullYear()} Happy {HumanReadableDay()}!</FooterGreeting>
+        <ContactLinks />
+      </Box>
     </Wrapper>
   </UIFooter>
 )

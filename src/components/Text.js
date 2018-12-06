@@ -21,6 +21,7 @@ const Text = system(
   'space',
   'textStyle',
   'textAlign',
+  'width'
 )
 
 Text.displayName = 'Text'

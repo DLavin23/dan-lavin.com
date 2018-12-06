@@ -11,12 +11,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 const Main = system({
   is: 'main',
-  px: [3,4],
 })
-
-// const PageWrapper = system({
-//   is: 'div',
-// })
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -41,13 +36,13 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <ThemeProvider theme={theme}>
-          <div>
+          <>
             <Header siteTitle={data.site.siteMetadata.title} />
-              <Main>
-                {children}
-              </Main>
-              <Footer />
-          </div>
+            <Main>
+              {children}
+            </Main>
+            <Footer />
+          </>
         </ThemeProvider>
       </>
     )}

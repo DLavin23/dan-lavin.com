@@ -11,6 +11,7 @@ const Headline = system({
   fontSize: 7,
   m: 0,
   pb: 3,
+  width: ['100%','95%']
 },
  {
    lineHeight: '1.25'
