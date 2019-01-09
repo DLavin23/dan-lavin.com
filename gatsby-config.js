@@ -10,6 +10,20 @@ module.exports = {
         name: 'pages',
       },
     },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/content/books`,
+    //     name: 'books',
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/content/journal`,
+    //     name: 'journal',
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

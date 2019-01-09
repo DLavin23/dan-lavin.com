@@ -2,19 +2,17 @@ import React from 'react'
 import Layout from '../components/layout'
 import Hero from '../components/Hero'
 import Text from '../components/Text'
-import Section from '../components/Section'
-import SectionHeader from '../components/SectionHeader'
+import Wrapper from '../components/Wrapper'
 
 const Work = () => (
   <Layout>
     <Hero>
-      <Text>
-        Work History
-      </Text>
+      <Wrapper>
+        <Text>
+          Work I've done
+        </Text>
+      </Wrapper>
     </Hero>
-    <Section>
-      <SectionHeader title="Work" />
-    </Section>
   </Layout>
 )
 

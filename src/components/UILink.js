@@ -7,7 +7,10 @@ const UILink = system({
   {
     textDecoration: 'none',
   },
+  'alignItems',
   'color',
+  'display',
+  'fontSize',
   'fontWeight',
   'space',
   'textDecoration',

@@ -4,17 +4,16 @@ import Hero from '../components/Hero'
 import Text from '../components/Text'
 import Wrapper from '../components/Wrapper'
 
-const Principles = () => (
+const Journal = () => (
   <Layout>
     <Hero>
       <Wrapper>
         <Text>
-          Principles (WIP)
-          {/* https://about.gitlab.com/handbook/values/ */}
+          Journal
         </Text>
       </Wrapper>
     </Hero>
   </Layout>
 )
 
-export default Principles
+export default Journal
