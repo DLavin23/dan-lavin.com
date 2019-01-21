@@ -8,8 +8,8 @@ const Principles = () => (
   <Layout>
     <Hero>
       <Wrapper>
-        <Text>
-          Principles (WIP)
+        <Text is="h2">
+          Coming Soon!
           {/* https://about.gitlab.com/handbook/values/ */}
         </Text>
       </Wrapper>

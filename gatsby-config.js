@@ -40,5 +40,6 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
     'gatsby-transformer-remark',
+    'gatsby-plugin-styled-components',
   ],
 }

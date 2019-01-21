@@ -8,8 +8,8 @@ const Work = () => (
   <Layout>
     <Hero>
       <Wrapper>
-        <Text>
-          Work I've done
+        <Text is="h2">
+          Coming Soon!
         </Text>
       </Wrapper>
     </Hero>

@@ -33,7 +33,7 @@ const UINavLink = system(
 {
   is: Link,
   color: 'grayDark',
-  display: ['none', 'inline-block'],
+  // display: ['none', 'inline-block'],
   fontSize: 3,
   px: 2,
   blacklist: ['Link']
