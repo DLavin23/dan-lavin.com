@@ -22,7 +22,6 @@ const getWelcomeMessage = () => {
   if (currentHour >= 0 && currentHour < 12) {
     return (
       <Box
-        is="div"
         alignItems="center"
         display="flex"
       >

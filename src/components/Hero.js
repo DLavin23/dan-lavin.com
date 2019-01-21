@@ -2,7 +2,7 @@ import system from 'system-components'
 
 const Hero = system({
   is: 'div',
-  py: [4,5],
+  py: [5, 6],
 },
   'display',
   'color',

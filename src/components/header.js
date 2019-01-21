@@ -4,7 +4,7 @@ import system from 'system-components'
 import Box from './Box'
 import Wrapper from './Wrapper'
 import { Link } from 'gatsby'
-import { Menu, AtSign } from 'react-feather'
+import { AtSign } from 'react-feather'
 
 const UIHeader = system({
   is: 'header',
@@ -29,11 +29,6 @@ const LogoLink = system({
   fontWeight: '700',
 })
 
-const MenuButton = system({
-  is: 'button',
-  display: ['block', 'none']
-})
-
 const UINavLink = system(
 {
   is: Link,
@@ -41,6 +36,7 @@ const UINavLink = system(
   display: ['none', 'inline-block'],
   fontSize: 3,
   px: 2,
+  blacklist: ['Link']
 },
   props => ({
     cursor: 'pointer',
@@ -70,9 +66,6 @@ const Header = ({ siteTitle }) => (
           </LogoLink>
         </Logo>
         <Nav>
-          <MenuButton>
-            <Menu />
-          </MenuButton>
           <UINavLink
             to="/about"
             activeStyle={{

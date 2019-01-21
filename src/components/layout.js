@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import './layout.css'
 import theme from '../theme'
 import system from 'system-components'
+import Box from './Box'
 import Header from './header'
 import Footer from './footer'
 import { ThemeProvider } from 'styled-components'
@@ -36,13 +37,13 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <ThemeProvider theme={theme}>
-          <>
+          <Box bg="white">
             <Header siteTitle={data.site.siteMetadata.title} />
             <Main>
               {children}
             </Main>
             <Footer />
-          </>
+          </Box>
         </ThemeProvider>
       </>
     )}
