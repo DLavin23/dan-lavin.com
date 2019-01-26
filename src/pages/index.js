@@ -58,7 +58,7 @@ const getWelcomeMessage = () => {
 
 export default () => {
   return (
-    <Layout>
+    <Layout bg={'red'}>
       <Hero>
         <Wrapper>
           <Text
@@ -72,10 +72,10 @@ export default () => {
           <HeroHeadline>
             I'm a <Highlight>product</Highlight> leader with a passion for design, development &amp; user experience.
           </HeroHeadline>
-          <Text fontSize={[3,5]} color="grayDark" mb={3}>
+          <Text fontSize={[4,5]} color="grayDark" mb={4}>
             Currently, I lead product at Hatch, Where we're focused on building a platform to help businesses create stronger, more personalized relationships with their customers.
           </Text>
-          <p>check out the slightly longer version <Link to="/about">here.</Link></p>
+          <Text fontSize={[4,5]} color="grayDark" mb={4}>check out the slightly longer version <Link to="/about">here.</Link></Text>
           <ContactLinks />
         </Wrapper>
       </Hero>

@@ -1,6 +1,16 @@
 module.exports = {
   siteMetadata: {
     title: 'Dan Lavin',
+    navLinks: [
+      {
+        name: 'home',
+        link: '/',
+      },
+      {
+        name: 'about',
+        link: '/about',
+      },
+    ],
   },
   plugins: [
     {

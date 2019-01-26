@@ -4,23 +4,34 @@ import Helmet from 'react-helmet'
 import './layout.css'
 import theme from '../theme'
 import system from 'system-components'
-import Box from './Box'
 import Header from './header'
 import Footer from './footer'
 import { ThemeProvider } from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 
+const PageWrapper = system({
+  is: 'div',
+  bg: 'white',
+},
+  'bg',
+  'color',
+)
+
 const Main = system({
   is: 'main',
 })
 
-const Layout = ({ children }) => (
+const Layout = ({ children, pageBackground}) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
         site {
           siteMetadata {
             title
+            navLinks {
+              name
+              link
+            }
           }
         }
       }
@@ -37,13 +48,16 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <ThemeProvider theme={theme}>
-          <Box bg="white">
-            <Header siteTitle={data.site.siteMetadata.title} />
-            <Main>
+          <PageWrapper bg={pageBackground}>
+            <Header
+              navLinks={data.site.siteMetadata.navLinks}
+              siteTitle={data.site.siteMetadata.title}
+            />
+            <Main role="main">
               {children}
             </Main>
             <Footer />
-          </Box>
+          </PageWrapper>
         </ThemeProvider>
       </>
     )}

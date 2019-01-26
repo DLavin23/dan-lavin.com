@@ -6,6 +6,7 @@ const Highlight = system({
 },
   props => ({
     position: 'relative',
+    zIndex: 1,
     '&::after': {
       backgroundColor: `${themeGet('colors.yellow')(props)}`,
       bottom: '5px',

@@ -29,7 +29,7 @@ const LogoLink = system({
   fontWeight: '700',
 })
 
-const UINavLink = system(
+const NavLink = system(
 {
   is: Link,
   color: 'grayDark',
@@ -53,7 +53,7 @@ const Nav = system({
   display: 'flex'
 })
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, navLinks }) => (
   <UIHeader>
     <Wrapper>
       <Box display="flex" alignItems="center" justifyContent="space-between">
@@ -66,46 +66,21 @@ const Header = ({ siteTitle }) => (
           </LogoLink>
         </Logo>
         <Nav>
-          <UINavLink
-            to="/about"
-            activeStyle={{
-              textDecoration: 'underline'
-            }}
-          >
-            About
-          </UINavLink>
-          <UINavLink
-            to="/principles"
-            activeStyle={{
-              textDecoration: 'underline'
-            }}
-          >
-            Principles
-          </UINavLink>
-          <UINavLink
-            to="/work"
-            activeStyle={{
-              textDecoration: 'underline'
-            }}
-          >
-            Work
-          </UINavLink>
-          <UINavLink
-            to="/journal"
-            activeStyle={{
-              textDecoration: 'underline'
-            }}
-          >
-            Journal
-          </UINavLink>
-          <UINavLink
-            to="/books"
-            activeStyle={{
-              textDecoration: 'underline'
-            }}
-          >
-            Books
-          </UINavLink>
+          {
+            navLinks.map(link =>
+              <NavLink key={link.name}>
+                <Link
+                  to={link.link}
+                  style={{textDecoration: 'none', color: 'inherit'}}
+                  activeStyle={{
+                    textDecoration: 'underline'
+                  }}
+                >
+                  {link.name}
+                </Link>
+              </NavLink>
+            )
+          }
         </Nav>
       </Box>
     </Wrapper>

@@ -16,11 +16,12 @@ const colors = {
   redDark: '#9c292d',
   redLight: '#f7e2e2',
   white: '#ffffff',
-  yellow: '#ffc58b',
+  yellow: 'hsla(55, 100%, 75%, 1)',
   yellowDark: '#594430',
 }
 
-const fontSizes = [10, 12, 14, 16, 20, 24, 32, 48, 64, 72, 96]
+const fontSizes = [10, 12, 14, 16, 18, 20, 24, 30, 36, 48, 60, 72, 96]
+const space = [0, 4, 8, 16, 32, 64, 128, 256]
 
 export default {
   borders: [0, '1px solid', '2px solid'],
@@ -63,12 +64,6 @@ export default {
   },
   lineHeight: '1.5',
   listTypes: ['none', 'disc'],
-  shadows: [
-    'none',
-    `inset 0 0 0 1px ${colors.grayLight}`,
-    `inset 0 0 0 1px ${colors.grayLight}, 0 0 4px ${colors.gray}`,
-    `0 2px 6px 0 ${colors.grayLight}`,
-  ],
-  space: [0, 4, 8, 16, 32, 64, 128, 256],
+  space,
   textColor: colors.offBlack,
 }

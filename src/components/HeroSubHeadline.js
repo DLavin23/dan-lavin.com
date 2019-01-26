@@ -4,7 +4,7 @@ import system from 'system-components'
 const SubHeadline = system({
   is: 'h3',
   color: 'offBlack',
-  fontSize: 7,
+  fontSize: [7,8],
 })
 
 const HeroHeadline = ({ children }) => {
