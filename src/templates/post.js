@@ -1,8 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import system from 'system-components'
 import Layout from '../components/layout'
 import Wrapper from '../components/Wrapper'
 
+const PostBody = system({
+  is: 'div',
+  // fontSize: 4,
+})
 class PostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -15,7 +20,7 @@ class PostTemplate extends React.Component {
           <p>
             {post.frontmatter.date}
           </p>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <PostBody dangerouslySetInnerHTML={{ __html: post.html }} />
         </Wrapper>
       </Layout>
     )

@@ -10,6 +10,10 @@ module.exports = {
         name: 'about',
         link: '/about',
       },
+      {
+        name: 'books',
+        link: '/books',
+      },
     ],
   },
   plugins: [
@@ -33,6 +37,12 @@ module.exports = {
         path: `${__dirname}/content/journal`,
         name: 'journal',
       },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,

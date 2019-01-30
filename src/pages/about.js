@@ -28,7 +28,6 @@ const About = () => (
           {/* <Box width="40%">
             <ProfileImg src={Profile} alt="Dan Lavin" />
           </Box> */}
-
         </Box>
       </Wrapper>
     </Hero>

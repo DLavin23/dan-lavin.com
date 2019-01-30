@@ -1,5 +1,5 @@
 import React from 'react'
-import { themeGet } from 'styled-system'
+// import { themeGet } from 'styled-system'
 import system from 'system-components'
 import Box from './Box'
 import Wrapper from './Wrapper'
@@ -30,22 +30,34 @@ const LogoLink = system({
 })
 
 const NavLink = system(
-{
-  is: Link,
-  color: 'grayDark',
-  // display: ['none', 'inline-block'],
-  fontSize: 3,
-  px: 2,
-  blacklist: ['Link']
-},
-  props => ({
-    cursor: 'pointer',
-    textDecoration: 'none',
-    '&:hover': {
-      color: themeGet('colors.blue')(props),
-    },
-  })
+  {
+    is: 'li',
+    color: 'offBlack',
+    fontSize: 3,
+    fontWeight: 400,
+    display: 'inline-flex',
+    px: 2,
+  },
+  {
+    listStyleType: 'none',
+  }
 )
+
+// const NavLink = system(
+// {
+//   is: 'li',
+//   color: 'grayDark',
+//   fontSize: 3,
+//   px: 2,
+// },
+//   props => ({
+//     cursor: 'pointer',
+//     textDecoration: 'none',
+//     '&:hover': {
+//       color: themeGet('colors.blue')(props),
+//     },
+//   })
+// )
 
 // TODO: refactor and move to separate component
 const Nav = system({
