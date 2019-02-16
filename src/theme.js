@@ -25,7 +25,7 @@ const space = [0, 4, 8, 16, 32, 64, 128, 256]
 
 export default {
   borders: [0, '1px solid', '2px solid'],
-  breakpoints: ['900px'],
+  breakpoints: ['600px', '900px'],
   colors,
   colorStyles: {
     default: {

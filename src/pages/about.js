@@ -15,7 +15,7 @@ import SectionHeader from '../components/SectionHeader'
 // })
 
 const About = () => (
-  <Layout>
+  <Layout pageBackground="offWhite">
     <Hero>
       <Wrapper>
         <Box display={['block', 'flex']}>

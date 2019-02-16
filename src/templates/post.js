@@ -1,27 +1,27 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import system from 'system-components'
 import Layout from '../components/layout'
 import Wrapper from '../components/Wrapper'
+import Box from '../components/Box'
+import Hero from '../components/Hero'
+import Text from '../components/Text'
 
-const PostBody = system({
-  is: 'div',
-  // fontSize: 4,
-})
 class PostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <Wrapper>
-          <h1>{post.frontmatter.title}</h1>
-          <p>
-            {post.frontmatter.date}
-          </p>
-          <PostBody dangerouslySetInnerHTML={{ __html: post.html }} />
-        </Wrapper>
+      <Layout location={this.props.location} title={siteTitle} pageBackground="offWhite" pageColor="offBlack">
+        <Hero>
+          <Wrapper>
+            <Box py={4}>
+              <Text is="h2">{post.frontmatter.title}</Text>
+            </Box>
+
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          </Wrapper>
+        </Hero>
       </Layout>
     )
   }

@@ -21,7 +21,7 @@ const Main = system({
   is: 'main',
 })
 
-const Layout = ({ children, pageBackground}) => (
+const Layout = ({ children, pageBackground, pageColor}) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -48,7 +48,7 @@ const Layout = ({ children, pageBackground}) => (
           <html lang="en" />
         </Helmet>
         <ThemeProvider theme={theme}>
-          <PageWrapper bg={pageBackground}>
+          <PageWrapper bg={pageBackground} color={pageColor}>
             <Header
               navLinks={data.site.siteMetadata.navLinks}
               siteTitle={data.site.siteMetadata.title}

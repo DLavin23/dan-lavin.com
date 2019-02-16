@@ -9,6 +9,7 @@ const Box = system(
   'color',
   'display',
   'justifyContent',
+  'maxWidth',
   'space',
   'width',
 )

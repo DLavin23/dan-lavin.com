@@ -8,10 +8,9 @@ const Header = system({
 const Headline = system({
   is: 'h2',
   color: 'offBlack',
-  fontSize: [7,9],
+  fontSize: [5,6,7],
   m: 0,
   pb: 3,
-  width: ['100%','95%']
 },
  {
    lineHeight: '1.25'

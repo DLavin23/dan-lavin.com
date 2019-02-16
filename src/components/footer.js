@@ -2,12 +2,11 @@ import React from 'react'
 import system from 'system-components'
 import Box from './Box'
 import Wrapper from './Wrapper'
-import ContactLinks from './ContactLinks'
+// import ContactLinks from './ContactLinks'
 
 const UIFooter = system({
   is: 'footer',
-  borderTop: '1px solid',
-  borderColor: 'grayLight',
+  bg: 'offWhite',
   py: 3,
   width: '100%',
 })
@@ -26,7 +25,7 @@ const Footer = () => (
     <Wrapper>
       <Box display="flex" alignItems="center" justifyContent="space-between">
         <FooterGreeting>&copy;{new Date().getFullYear()} Happy {HumanReadableDay()}!</FooterGreeting>
-        <ContactLinks />
+        {/* <ContactLinks /> */}
       </Box>
     </Wrapper>
   </UIFooter>

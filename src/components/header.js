@@ -8,8 +8,7 @@ import { AtSign } from 'react-feather'
 
 const UIHeader = system({
   is: 'header',
-  borderTop: '4px solid',
-  borderColor: 'blue',
+  bg: 'offWhite',
   py: 3,
   w: 1,
 })
@@ -37,6 +36,7 @@ const NavLink = system(
     fontWeight: 400,
     display: 'inline-flex',
     px: 2,
+    m: 0,
   },
   {
     listStyleType: 'none',

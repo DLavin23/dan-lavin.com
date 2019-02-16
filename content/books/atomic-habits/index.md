@@ -1,15 +1,15 @@
 ---
 path: "/atomic-habits"
-title: Atomic Habits
-author: James Clear
+title: "Atomic Habits"
+author: "James Clear"
 rating: 8
-postType: review
+postType: "review"
+externalLink: "https://www.amazon.com/dp/B0076DDBJ6/"
+tags: ["non-fiction"]
 ---
 
-## Overview
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, porro similique exercitationem id delectus commodi natus cumque debitis? Nemo dolorum voluptate ex ratione doloremque quia perferendis facere quisquam blanditiis quaerat.
+## Summary
+No matter your goals, Atomic Habits offers a proven framework for improving--every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.
 
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, porro similique exercitationem id delectus commodi natus cumque debitis? Nemo dolorum voluptate ex ratione doloremque quia perferendis facere quisquam blanditiis quaerat.
 
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, porro similique exercitationem id delectus commodi natus cumque debitis? Nemo dolorum voluptate ex ratione doloremque quia perferendis facere quisquam blanditiis quaerat.
 ## Highlights
