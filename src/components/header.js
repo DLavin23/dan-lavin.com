@@ -26,6 +26,9 @@ const LogoLink = system({
   color: 'offBlack',
   display: 'flex',
   fontWeight: '700',
+},
+{
+  textDecoration: 'none'
 })
 
 const NavLink = system(
@@ -42,22 +45,6 @@ const NavLink = system(
     listStyleType: 'none',
   }
 )
-
-// const NavLink = system(
-// {
-//   is: 'li',
-//   color: 'grayDark',
-//   fontSize: 3,
-//   px: 2,
-// },
-//   props => ({
-//     cursor: 'pointer',
-//     textDecoration: 'none',
-//     '&:hover': {
-//       color: themeGet('colors.blue')(props),
-//     },
-//   })
-// )
 
 // TODO: refactor and move to separate component
 const Nav = system({
@@ -85,7 +72,7 @@ const Header = ({ siteTitle, navLinks }) => (
                   to={link.link}
                   style={{textDecoration: 'none', color: 'inherit'}}
                   activeStyle={{
-                    textDecoration: 'underline'
+                    borderBottom: '2px solid #517dbc',
                   }}
                 >
                   {link.name}

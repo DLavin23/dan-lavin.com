@@ -10,7 +10,7 @@ I remember flipping through the channels one Saturday morning, trying to find so
 when I suddenly came across a goofy looking man with a paintbrush and one of the best damn afros you've ever seen. That man was none other than Bob Ross, artist and host of the PBS series,
 "The Joys of Painting."
 
-![Bob Ross](/images/bob_ross.jpg)
+![Bob Ross](./bob_ross.jpg)
 
 It's very easy to get distracted by the physical appearance of Mr. Ross, but all joking aside, there
 was something quite magical about his style of painting. I distinctly remember being being mesmerized
@@ -88,7 +88,7 @@ desires.
 }
 ```
 
-![Static Sky](/images/animation-sky.png)
+![Static Sky](./animation-sky.png)
 
 Awesome, look at that beautiful sky! Next, we're going to pretend that we're water, just floating
 along, having a great day. We'll add a nice ocean blue to our canvas and blend it all together using
@@ -109,7 +109,7 @@ up with the water.
 }
 ```
 
-![static sky and water](/images/animation-sky-water.png)
+![static sky and water](./animation-sky-water.png)
 
 Looking good! Moving along, we're going to add in the sun, moon, and just because they're free, lets
 add a happy little cloud that floats around the sky. The sun and the moon are pretty similar so
@@ -192,12 +192,12 @@ will give us the cloud shaped object we're looking for.
 I know this can be very hard to visualize so let's imagine each cloud object as a different color
 and maybe this will become more clear:
 
-![CSS cloud description](/images/cloud-description.png)
+![CSS cloud description](./cloud-description.png)
 
 That's better! Now it's a little easier to see how the different shaped objects can be used to make
 one unified and happy cloud. Finally, we're ready to show off our un-animated canvas in its entirety!
 
-![CSS static canvas](/images/unanimated-canvas.png)
+![CSS static canvas](./unanimated-canvas.png)
 
 ##Animating Our Canvas
 CSS animations are super easy to use and they're a great way to really bring your designs to life!

@@ -1,11 +1,13 @@
 ---
-path: "/hello-world"
+path: "/moving-to-gatsby"
 date: "2019-01-13"
 title: "Moving to Gatsby"
 postType: blog
 tags: ["programming"]
 ---
 
-# Hello World
+# Yo, new site, who dis?
 
-This site is moving to gatsby!
+
+
+![hello world](./venveo.png)

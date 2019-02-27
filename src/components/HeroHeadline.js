@@ -9,12 +9,10 @@ const Headline = system({
   is: 'h2',
   color: 'offBlack',
   fontSize: [5,6,7],
+  lineHeight: '1.25',
   m: 0,
   pb: 3,
 },
- {
-   lineHeight: '1.25'
- }
 )
 
 const HeroHeadline = ({ children }) => {

@@ -50,7 +50,7 @@ export default {
     },
   },
   fontSizes,
-  fonts: ['-apple-system, BlinkMacSystemFont, sans-serif'],
+  // fonts: ['-apple-system, BlinkMacSystemFont, sans-serif'],
   fontWeights: {
     light: 300,
     normal: 400,
@@ -62,7 +62,6 @@ export default {
       letterSpacing: '0.2em'
     }
   },
-  lineHeight: '1.5',
   listTypes: ['none', 'disc'],
   space,
   textColor: colors.offBlack,

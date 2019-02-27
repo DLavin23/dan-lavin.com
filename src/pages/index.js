@@ -11,7 +11,7 @@ import Highlight from '../components/Highlight'
 // import UILink from '../components/UILink'
 import Text from '../components/Text'
 import Wrapper from '../components/Wrapper'
-import { Moon, Sunrise, Sun } from 'react-feather'
+// import { Moon, Sunrise, Sun } from 'react-feather'
 
 // move to seperate file
 const currentDate = new Date()
@@ -24,8 +24,9 @@ const getWelcomeMessage = () => {
         alignItems="center"
         display="flex"
       >
-        <Sunrise />
-        <Box is="span" px={2}>Good Morning!</Box>
+
+        {/* <Sunrise /> */}
+        <Box is="span">Good Morning, I'm Dan!</Box>
       </Box>
     )
 
@@ -37,8 +38,9 @@ const getWelcomeMessage = () => {
         alignItems="center"
         display="flex"
       >
-        <Sun />
-        <Box is="span" px={2}>Good Afternoon!</Box>
+
+        {/* <Sun /> */}
+        <Box is="span">Good Afternoon, I'm Dan!</Box>
       </Box>
     )
   } else {
@@ -48,8 +50,8 @@ const getWelcomeMessage = () => {
         alignItems="center"
         display="flex"
       >
-        <Moon />
-        <Box is="span" px={2}>Good Evening!</Box>
+        {/* <Moon /> */}
+        <Box is="span">Good Evening, I'm Dan!</Box>
       </Box>
     )
   }
@@ -58,24 +60,27 @@ const getWelcomeMessage = () => {
 
 export default () => {
   return (
-    <Layout pageBackground="offWhite" pageColor="offBlack">
-      <Hero>
+    <Layout pageBackground="offWhite">
+      <Hero bg="offWhite" color="offBlack">
         <Wrapper>
           <Box width={['1','80%']}>
             <Text
               is="h4"
-              fontSize={[3,4]}
-              mb={2}
+              fontSize={[7,8,9]}
+              lineHeight="1.25"
+              mb={0}
+              pb={3}
             >
               {getWelcomeMessage()}
             </Text>
             <Text
               is="h2"
-              fontSize={[6,7,8]}
+              fontSize={[5,6,7]}
+              lineHeight="1.25"
               mb={0}
-              pb={3}
+              pb={2}
             >
-              I'm Dan, a <Highlight>product</Highlight> leader with a passion for design, development &amp; user experience.
+              I'm a <Highlight>product</Highlight> leader with a passion for design, development &amp; user experience.
             </Text>
             <Text is="p" fontSize={[3,4]} color="grayDark" mb={3}>
               Currently, I lead product at <a href="https://www.hatchloyalty.com/" target="_blank" rel="noopener noreferrer">Hatch</a>, where we're focused on building a platform that helps businesses create stronger, more personal relationships with their customers. If you're interested in a slightly longer version, click <Link to="/about">here.</Link>

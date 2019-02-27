@@ -3,6 +3,8 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Hero from '../components/Hero'
 import Wrapper from '../components/Wrapper'
+import Box from '../components/Box'
+import Text from '../components/Text'
 
 class JournalIndex extends React.Component {
   render() {
@@ -16,19 +18,20 @@ class JournalIndex extends React.Component {
         location={this.props.location}
         title={siteTitle}
         desc={description}
+        pageBackground="offWhite"
       >
         <Hero>
           <Wrapper>
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
               return (
-                <div key={node.fields.slug}>
-                  <h3>
+                <Box maxWidth="600px" pb={4} key={node.fields.slug}>
+                  <Text is="h3" fontSize={[3,5]} m={0} pb={1}>
                     <Link to={node.fields.slug}>{title}</Link>
-                  </h3>
-                  <small>{node.frontmatter.date}</small>
-                  <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                </div>
+                  </Text>
+                  <Text is="p" color="grayDark" m={0} pb={3} fontSize={1}>By: {node.frontmatter.author || 'Dan Lavin'}</Text>
+                  <Text is="p" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                </Box>
               )
             })}
           </Wrapper>

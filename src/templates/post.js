@@ -14,9 +14,16 @@ class PostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle} pageBackground="offWhite" pageColor="offBlack">
         <Hero>
-          <Wrapper>
+          <Wrapper
+            maxWidth="700px"
+          >
             <Box py={4}>
-              <Text is="h2">{post.frontmatter.title}</Text>
+              <Text
+                is="h1"
+                fontSize={[7,8,9]}
+              >
+              {post.frontmatter.title}
+            </Text>
             </Box>
 
             <div dangerouslySetInnerHTML={{ __html: post.html }} />

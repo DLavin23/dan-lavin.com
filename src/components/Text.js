@@ -3,7 +3,6 @@ import system from 'system-components'
 const Text = system(
   {
     fontSize: 3,
-    lineHeight: '1.5',
     m: 0,
     textStyle: 'normal',
   },

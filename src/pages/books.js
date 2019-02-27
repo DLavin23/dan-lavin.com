@@ -26,7 +26,6 @@ class BookIndex extends React.Component {
               const title = node.frontmatter.title || node.fields.slug
               return (
                 <Box maxWidth="600px" pb={4} key={node.fields.slug}>
-                  {/* <Text>{node.frontmatter.tags}</Text> */}
                   <Text is="h3" fontSize={[3,5]} m={0} pb={1}>
                     <Link to={node.fields.slug}>{title}</Link>
                   </Text>
