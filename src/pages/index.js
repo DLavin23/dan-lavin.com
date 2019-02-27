@@ -66,7 +66,7 @@ export default () => {
           <Box width={['1','80%']}>
             <Text
               is="h4"
-              fontSize={[7,8,9]}
+              fontSize={[3,4,5]}
               lineHeight="1.25"
               mb={0}
               pb={3}
@@ -75,10 +75,10 @@ export default () => {
             </Text>
             <Text
               is="h2"
-              fontSize={[5,6,7]}
+              fontSize={[6,7,8]}
               lineHeight="1.25"
               mb={0}
-              pb={2}
+              pb={3}
             >
               I'm a <Highlight>product</Highlight> leader with a passion for design, development &amp; user experience.
             </Text>
