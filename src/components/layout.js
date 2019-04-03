@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import './layout.css'
-import theme from '../theme'
-import system from 'system-components'
-import Header from './header'
-import Footer from './footer'
 import { ThemeProvider } from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
+import Helmet from 'react-helmet'
+import './layout.css'
+import theme from 'src/theme'
+import system from 'system-components'
+import Header from 'src/components/header'
+import Footer from 'src/components/footer'
+
 
 const PageWrapper = system({
   is: 'div',

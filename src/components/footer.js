@@ -1,7 +1,7 @@
 import React from 'react'
 import system from 'system-components'
-import Box from './box'
-import Wrapper from './wrapper'
+import Box from 'src/components/box'
+import Wrapper from 'src/components/wrapper'
 
 const UIFooter = system({
   is: 'footer',

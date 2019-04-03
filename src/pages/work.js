@@ -1,8 +1,8 @@
 import React from 'react'
-import Layout from '../components/layout'
-import Section from '../components/section'
-import Text from '../components/text'
-import Wrapper from '../components/wrapper'
+import Layout from 'src/components/layout'
+import Section from 'src/components/section'
+import Text from 'src/components/text'
+import Wrapper from 'src/components/wrapper'
 
 const Work = () => (
   <Layout>

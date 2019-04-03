@@ -2,14 +2,14 @@ import React from 'react'
 // import { graphql } from "gatsby"
 import { Link } from 'gatsby'
 // import { Moon, Sunrise, Sun } from 'react-feather'
-import Box from '../components/box'
-import ContactLinks from '../components/contact-links'
-import Section from '../components/section'
-import Highlight from '../components/highlight'
-import Layout from '../components/layout'
-import Text from '../components/text'
-import UILink from '../components/ui-link'
-import Wrapper from '../components/wrapper'
+import Box from 'src/components/box'
+import ContactLinks from 'src/components/contact-links'
+import Section from 'src/components/section'
+import Highlight from 'src/components/highlight'
+import Layout from 'src/components/layout'
+import Text from 'src/components/text'
+import UILink from 'src/components/ui-link'
+import Wrapper from 'src/components/wrapper'
 
 // move to seperate file
 const currentDate = new Date()
