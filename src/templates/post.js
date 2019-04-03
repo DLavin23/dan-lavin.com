@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Box from '../components/box'
 import Layout from '../components/layout'
-import Wrapper from '../components/Wrapper'
-import Box from '../components/Box'
-import Hero from '../components/Hero'
-import Text from '../components/Text'
+import Section from '../components/section'
+import Text from '../components/text'
+import Wrapper from '../components/wrapper'
 
 class PostTemplate extends React.Component {
   render() {
@@ -13,7 +13,7 @@ class PostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle} pageBackground="offWhite" pageColor="offBlack">
-        <Hero>
+        <Section>
           <Wrapper
             maxWidth="700px"
           >
@@ -28,7 +28,7 @@ class PostTemplate extends React.Component {
 
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
           </Wrapper>
-        </Hero>
+        </Section>
       </Layout>
     )
   }

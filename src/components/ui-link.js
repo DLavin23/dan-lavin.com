@@ -16,4 +16,18 @@ const UILink = system({
   'textDecoration',
 )
 
+UILink.External = system(
+  {
+    is: 'a',
+    color: 'purple'
+  },
+  'alignItems',
+  'color',
+  'display',
+  'fontSize',
+  'fontWeight',
+  'space',
+  'textDecoration',
+)
+
 export default UILink

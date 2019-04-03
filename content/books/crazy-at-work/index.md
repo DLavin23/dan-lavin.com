@@ -1,10 +1,10 @@
 ---
-path: "/company-of-one"
-title: "Company of One"
-authors: ["Paul Jarvis"]
+path: "/it-doesnt-have-to-be-crazy-at-work"
+title: "It Doesn't Have To Be Crazy At Work"
+authors: ["Jason Fried", "DHH"]
 rating: 7
 postType: "review"
-externalLink: "https://www.amazon.com/dp/B0076DDBJ6/"
+externalLink: ""
 tags: ["non-fiction"]
 ---
 

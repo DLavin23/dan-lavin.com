@@ -1,10 +1,10 @@
 import React from 'react'
-// import { themeGet } from 'styled-system'
-import system from 'system-components'
-import Box from './Box'
-import Wrapper from './Wrapper'
 import { Link } from 'gatsby'
 import { AtSign } from 'react-feather'
+// import { themeGet } from 'styled-system'
+import system from 'system-components'
+import Box from './box'
+import Wrapper from './wrapper'
 
 const UIHeader = system({
   is: 'header',

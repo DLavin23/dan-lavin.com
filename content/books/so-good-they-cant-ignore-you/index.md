@@ -1,7 +1,7 @@
 ---
 path: "/so-good-they-cant-ignore-you"
 title: "So Good They Can't Ignore You"
-author: "Cal Newport"
+authors: ["Cal Newport"]
 rating: 7
 postType: "review"
 externalLink: "https://www.amazon.com/dp/B0076DDBJ6/"

@@ -1,17 +1,17 @@
 import React from 'react'
 // import { graphql } from "gatsby"
 import { Link } from 'gatsby'
-import Layout from '../components/layout'
-import Box from '../components/Box'
-import ContactLinks from '../components/ContactLinks'
-import Hero from '../components/Hero'
-import Highlight from '../components/Highlight'
-// import Section from '../components/Section'
-// import SectionHeader from '../components/SectionHeader'
-// import UILink from '../components/UILink'
-import Text from '../components/Text'
-import Wrapper from '../components/Wrapper'
 // import { Moon, Sunrise, Sun } from 'react-feather'
+import Box from '../components/box'
+import ContactLinks from '../components/contact-links'
+import Section from '../components/section'
+import Highlight from '../components/highlight'
+// import Section from '../components/section'
+// import SectionHeader from '../components/section-header'
+import Layout from '../components/layout'
+import Text from '../components/text'
+import UILink from '../components/ui-link'
+import Wrapper from '../components/wrapper'
 
 // move to seperate file
 const currentDate = new Date()
@@ -57,13 +57,12 @@ const getWelcomeMessage = () => {
   }
 }
 
-
 export default () => {
   return (
     <Layout pageBackground="offWhite">
-      <Hero bg="offWhite" color="offBlack">
+      <Section color="offBlack">
         <Wrapper>
-          <Box width={['1','80%']}>
+          <Box width={['1','75%']}>
             <Text
               is="h4"
               fontSize={[3,4,5]}
@@ -82,14 +81,17 @@ export default () => {
             >
               I'm a <Highlight>product</Highlight> leader with a passion for design, development &amp; user experience.
             </Text>
-            <Text is="p" fontSize={[3,4]} color="grayDark" mb={3}>
-              Currently, I lead product at <a href="https://www.hatchloyalty.com/" target="_blank" rel="noopener noreferrer">Hatch</a>, where we're focused on building a platform that helps businesses create stronger, more personal relationships with their customers. If you're interested in a slightly longer version, click <Link to="/about">here.</Link>
+            <Text is="p" fontSize={[3,4]} color="offBlack" mb={4} >
+              Currently, I lead product at <UILink.External href="https://www.hatchloyalty.com/" target="_blank" rel="noopener noreferrer">Hatch</UILink.External> where our team is focused on building a technology platform that helps businesses create stronger, more personal relationships with their customers. If you're interested in a slightly longer version, click <Link to="/about">here.</Link>
             </Text>
-            <Text fontSize={[3,4]} color="grayDark" mb={4}></Text>
             <ContactLinks />
           </Box>
+
+          <Section>
+
+          </Section>
         </Wrapper>
-      </Hero>
+      </Section>
     </Layout>
   )
 }

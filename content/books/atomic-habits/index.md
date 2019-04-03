@@ -1,7 +1,7 @@
 ---
 path: "/atomic-habits"
 title: "Atomic Habits"
-author: "James Clear"
+authors: ["James Clear"]
 rating: 8
 postType: "review"
 externalLink: "https://www.amazon.com/dp/B0076DDBJ6/"

@@ -1,19 +1,19 @@
 import React from 'react'
 import Layout from '../components/layout'
-import Hero from '../components/Hero'
-import Text from '../components/Text'
-import Wrapper from '../components/Wrapper'
+import Section from '../components/section'
+import Text from '../components/text'
+import Wrapper from '../components/wrapper'
 
 const Principles = () => (
   <Layout>
-    <Hero>
+    <Section>
       <Wrapper>
         <Text is="h2">
           Coming Soon!
           {/* https://about.gitlab.com/handbook/values/ */}
         </Text>
       </Wrapper>
-    </Hero>
+    </Section>
   </Layout>
 )
 

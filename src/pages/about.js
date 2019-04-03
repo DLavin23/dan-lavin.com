@@ -1,39 +1,34 @@
 import React from 'react'
-// import system from 'system-components'
 import Layout from '../components/layout'
-import Hero from '../components/Hero'
-import Box from '../components/Box'
-import Text from '../components/Text'
-import Wrapper from '../components/Wrapper'
-import Section from '../components/Section'
-import SectionHeader from '../components/SectionHeader'
-// import Profile from '../images/profile.png'
-
-// const ProfileImg = system({
-//   is: 'img',
-//   px: 4,
-// })
+import Box from '../components/box'
+import Text from '../components/text'
+import Wrapper from '../components/wrapper'
+import Section from '../components/section'
+import SectionHeader from '../components/section-header'
 
 const About = () => (
-  <Layout pageBackground="offWhite">
-    <Hero>
+  <Layout pageBackground="offWhite" pageColor="offBlack">
+    <Section>
       <Wrapper>
         <Box display={['block', 'flex']}>
-          <Box width="80%">
-            <SectionHeader title="Hi, I'm Dan." />
-            <Text fontSize={[3,4]} color="grayDark" mb={3} pr={3}>
+          <Box width={['100%','80%']}>
+            <Text
+              is="h3"
+              fontSize={6}
+              mb={3}
+            >
+              Hi, I'm Dan!
+            </Text>
+            <Text fontSize={[3,4]} mb={3} pr={3}>
               I love products that solve real problems. I enjoy design that is both simple and intuitive. I believe that talking to actual customers is the best way to make sure you're building the right product. I embrace change. Failure happens from time to time. That's OK, as long as you learn from your mistakes. I value strong communication. It's impossible to build a great product if design, engineering, and the business are not working as one team. Finally, I approach every problem with an "empty cup" and a "beginners mind".
             </Text>
           </Box>
-          {/* <Box width="40%">
-            <ProfileImg src={Profile} alt="Dan Lavin" />
-          </Box> */}
         </Box>
       </Wrapper>
-    </Hero>
+    </Section>
 
     <Wrapper>
-      <Section mb={5}>
+      <Section>
         <SectionHeader title="Some things I care about" />
         <ul>
           <li>Building digital products that solve real problems</li>
@@ -43,7 +38,8 @@ const About = () => (
           <li>Design Systems</li>
         </ul>
       </Section>
-      <Section mb={5}>
+
+      <Section>
         <SectionHeader title="Some things I know how to do" />
         <ul>
           <li>Product Management</li>
@@ -54,7 +50,8 @@ const About = () => (
           <li>CSS</li>
         </ul>
       </Section>
-      <Section mb={5}>
+
+      <Section>
         <SectionHeader title="Some things I'm trying to improve" />
         <ul>
           <li>UI and Visual Design</li>

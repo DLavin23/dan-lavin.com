@@ -1,10 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Box from '../components/box'
+import Section from '../components/section'
 import Layout from "../components/layout"
-import Hero from '../components/Hero'
-import Wrapper from '../components/Wrapper'
-import Box from '../components/Box'
-import Text from '../components/Text'
+import Text from '../components/text'
+import Wrapper from '../components/wrapper'
 
 class BookIndex extends React.Component {
   render() {
@@ -12,7 +12,6 @@ class BookIndex extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     const description = data.site.siteMetadata.description
     const posts = data.allMarkdownRemark.edges
-
     return (
       <Layout
         location={this.props.location}
@@ -20,22 +19,30 @@ class BookIndex extends React.Component {
         desc={description}
         pageBackground="offWhite"
       >
-        <Hero>
+        <Section>
           <Wrapper>
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
+              const authors = node.frontmatter.authors
+              // const tags = node.frontmatter.tags
+              // const renderMultipleTags = tags.map(tag => `${tag}, `)
+              const renderMultipleAuthors = authors.map(author => `${author}, `)
+
               return (
                 <Box maxWidth="600px" pb={4} key={node.fields.slug}>
+                  {/* <Tag>{tags.length > 1 ? renderMultipleTags : tags}</Tag> */}
                   <Text is="h3" fontSize={[3,5]} m={0} pb={1}>
                     <Link to={node.fields.slug}>{title}</Link>
                   </Text>
-                  <Text is="p" color="grayDark" m={0} pb={3} fontSize={1}>By: {node.frontmatter.author}</Text>
+                  <Text is="p" color="grayDark" m={0} pb={3} fontSize={1}>
+                    Written by: {authors.length > 1 ? renderMultipleAuthors : authors}
+                  </Text>
                   <Text is="p" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
                 </Box>
               )
             })}
           </Wrapper>
-        </Hero>
+        </Section>
       </Layout>
     )
   }
@@ -64,7 +71,7 @@ export const bookQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            author
+            authors
             tags
           }
         }

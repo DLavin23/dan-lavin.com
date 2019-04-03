@@ -1,10 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import Hero from '../components/Hero'
-import Wrapper from '../components/Wrapper'
-import Box from '../components/Box'
-import Text from '../components/Text'
+import Section from '../components/section'
+import Wrapper from '../components/wrapper'
+import Box from '../components/box'
+import Text from '../components/text'
 
 class JournalIndex extends React.Component {
   render() {
@@ -20,7 +20,7 @@ class JournalIndex extends React.Component {
         desc={description}
         pageBackground="offWhite"
       >
-        <Hero>
+        <Section>
           <Wrapper>
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
@@ -35,7 +35,7 @@ class JournalIndex extends React.Component {
               )
             })}
           </Wrapper>
-        </Hero>
+        </Section>
       </Layout>
     )
   }
