@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Box from 'src/components/box'
-import Layout from 'src/components/layout'
-import Section from 'src/components/section'
-import Text from 'src/components/text'
-import Wrapper from 'src/components/wrapper'
+import Box from '../components/box'
+import Layout from '../components/layout'
+import Section from '../components/section'
+import Text from '../components/text'
+import Wrapper from '../components/wrapper'
 
 class PostTemplate extends React.Component {
   render() {

@@ -1,10 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "src/components/layout"
-import Section from 'src/components/section'
-import Wrapper from 'src/components/wrapper'
-import Box from 'src/components/box'
-import Text from 'src/components/text'
+import Layout from "../components/layout"
+import Section from '../components/section'
+import Wrapper from '../components/wrapper'
+import Box from '../components/box'
+import Text from '../components/text'
 
 class JournalIndex extends React.Component {
   render() {

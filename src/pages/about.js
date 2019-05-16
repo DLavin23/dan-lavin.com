@@ -1,10 +1,10 @@
 import React from 'react'
-import Layout from 'src/components/layout'
-import Box from 'src/components/box'
-import Text from 'src/components/text'
-import Wrapper from 'src/components/wrapper'
-import Section from 'src/components/section'
-import SectionHeader from 'src/components/section-header'
+import Layout from '../components/layout'
+import Box from '../components/box'
+import Text from '../components/text'
+import Wrapper from '../components/wrapper'
+import Section from '../components/section'
+import SectionHeader from '../components/section-header'
 
 const About = () => (
   <Layout pageBackground="offWhite" pageColor="offBlack">

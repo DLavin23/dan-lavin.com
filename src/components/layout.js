@@ -4,10 +4,10 @@ import { ThemeProvider } from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import './layout.css'
-import theme from 'src/theme'
+import theme from '../theme'
 import system from 'system-components'
-import Header from 'src/components/header'
-import Footer from 'src/components/footer'
+import Header from './header'
+import Footer from './footer'
 
 
 const PageWrapper = system({
