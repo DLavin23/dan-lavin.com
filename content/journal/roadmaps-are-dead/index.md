@@ -69,10 +69,10 @@ Generally speaking, the management team meets regularly to discuss both short an
 
 Given proper context and a clear set of strategic goals/objective, it should be possible for product and engineering leaders to identify relevant themes or outcomes (e.g. performance, preparing for production launch, etc.) that need to be addressed in order to achieve the goals and objectives outlined for the company.
 
-With clearly communicated goals and the strategic direction for the quarter in place, the product and engineering is ready to begin more tactical planning around what features need to be built. To do this, we rely heavily on something called a Pitch.
+With clearly communicated goals and a quarterly strategic direction in place, the product and engineering is ready to begin more tactical planning around what features need to be built. At my current company, this tactical planning process typically starts with a ["Pitch,"](https://github.com/basecamp/handbook/blob/master/how-we-work.md#pitches) which is a concept made popular by the wonderful folks at Basecamp.
 
-A Pitch is a very clear and complete presentation of work that has been Shaped into something the engineering team can deliver in 6 weeks or less. A great pitch clearly articulates a problem and proposes a solution that's been vetted and scoped to fit within a release cycle. It must include enough information and context for product and engineering leaders to confidently evaluate, budget, and execute work. Think of a Pitch as a more friendly, human readable product/feature spec or requirements document. It's our way of aligning features with the product, the customer pain point, and the business value or strategic initiatives of the company.
 
+A Pitch is a very clear and complete presentation of work that has been shaped into something the engineering team can deliver in 6 weeks or less. A great Pitch clearly articulates a problem and proposes a solution that's been vetted and scoped to fit within a 6 week cycle. It must include enough information and context for product and engineering leaders to confidently evaluate, budget, and execute work. Think of a Pitch as a more friendly, human readable product/feature spec or requirements document. It's our way of aligning features with the product, the customer pain point, and the business value or strategic initiatives of the company.
 
 ![ideal product development flow](./ideal-roadmap-flow.png)
 
@@ -85,22 +85,25 @@ We have finally reached the end of this manifesto on road ... maps (pun intended
 - what we're thinking about doing next
 - what we've identified as potentially important work to do in the future
 
-My hope, is that the answer to those questions can eventually live in a new Basecamp project that I've created called: Product Roadmap - 2019. The goal of this project is to help people in the company understand: what we're working on now, what we're thinking about next, and what we're thinking about in the future. This project will also be the place where pitches are posted, making it the source of truth for where ideas get prioritized. It's still a work in progress, but my hope is this a good start and strikes the right amount of balance between thinking strategically and being realistic about commitments.
+The answer to that will likely vary from team to team. At Hatch, that answer is Basecamp, but that's only because that's the tool we prefer to use for communication. It could just as easily be replaced with something like Asana, Trello, or one of the many Atlassian products, etc. What's important is that there's a place, where everyone in the company can visit, that very quickly and easily helps them understand: what's being worked on, what coming up next, and what may be coming in the future.
 
 > Almost heaven, West Virginia
+<br/>
 > Blue Ridge Mountains, Shenandoah River
+<br/>
 > Life is old there, older than the trees
+<br/>
 > Younger than the mountains, blowing like a breeze
-
+<br/>
 > Country roads, take me home
+<br/>
 > To the place I belong
+<br/>
 > West Virginia, mountain mama
+<br/>
 > Take me home, country roads
+<br/>
 <cite>-John Denver</cite>
-
-<!-- Internal Resources
-Product Development Cycles - Product Roadmap - 2019
-Pitch Writing Guide - Product Roadmap - 2019 -->
 
 ### External Resources
 - [Keep features of your roadmap](https://hackernoon.com/keep-features-off-your-roadmap-b14543340881).

@@ -9,11 +9,12 @@ const typography = new Typography({
   bodyFontFamily: ["Open Sans", "-apple-system", "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Cantarell", "Helvetica Neue"],
   googleFonts: [
     {
-      name: 'Lato',
+      name: 'Open Sans',
       styles: [
         '100',
         '300',
         '400',
+        '600',
         '700',
         '900',
       ],
