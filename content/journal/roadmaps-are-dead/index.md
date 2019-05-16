@@ -63,7 +63,7 @@ However, we are a cycle or two away from being free of Murphy’s strategic stra
 
 ## Take Me Home
 
-Alright, all this talk of themes and outcome driven roadmaps is starting to make sense in theory, but how does it work in practice? What does a product roadmap look like at Hatch?
+Alright, all this talk of themes and outcome driven roadmaps is starting to make sense in theory, but how does it work in practice? What does a product roadmap actually look like?
 
 Generally speaking, the management team meets regularly to discuss both short and longer term goals and objectives. At beginning of each quarter these goals and objectives are shared with the entire company. These goals and/or strategic themes are intended to drive positive outcome(s) for the business and should be used internally to influence team or product specific goals.
 
@@ -85,7 +85,7 @@ We have finally reached the end of this manifesto on road ... maps (pun intended
 - what we're thinking about doing next
 - what we've identified as potentially important work to do in the future
 
-The answer to that will likely vary from team to team. At Hatch, that answer is Basecamp, but that's only because that's the tool we prefer to use for communication. It could just as easily be replaced with something like Asana, Trello, or one of the many Atlassian products, etc. What's important is that there's a place, where everyone in the company can visit, that very quickly and easily helps them understand: what's being worked on, what coming up next, and what may be coming in the future.
+The answer to that will likely vary from team to team. At Hatch, my current company, that answer is Basecamp, but that's only because it's the tool we prefer to use for communication. It could just as easily be replaced with something like Asana, Trello, or one of the many Atlassian products, etc. What's important is that there's a place, where everyone in the company can go, that very quickly and easily helps them understand: what's being worked on, what coming up next, and what may be coming in the future.
 
 > Almost heaven, West Virginia
 <br/>
