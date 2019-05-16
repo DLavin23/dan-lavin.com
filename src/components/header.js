@@ -3,8 +3,8 @@ import { Link } from 'gatsby'
 import { AtSign } from 'react-feather'
 // import { themeGet } from 'styled-system'
 import system from 'system-components'
-import Box from './box'
-import Wrapper from './wrapper'
+import Box from '../components/box'
+import Wrapper from '../components/wrapper'
 
 const UIHeader = system({
   is: 'header',

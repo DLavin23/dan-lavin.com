@@ -1,5 +1,5 @@
 import system from 'system-components'
-import Box from './box'
+import Box from '../components/box'
 
 const Panel = system(
   {
