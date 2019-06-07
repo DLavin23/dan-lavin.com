@@ -1,8 +1,8 @@
-import system from 'system-components'
+import system from '@rebass/components'
 
 const Section = system(
   {
-    is: 'section',
+    as: 'section',
     py: [4, 5],
   },
   'color',

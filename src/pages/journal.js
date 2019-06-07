@@ -1,10 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { Box, Text } from 'rebass'
 import Layout from "../components/layout"
 import Section from '../components/section'
 import Wrapper from '../components/wrapper'
-import Box from '../components/box'
-import Text from '../components/text'
 
 class JournalIndex extends React.Component {
   render() {
@@ -12,6 +11,8 @@ class JournalIndex extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     const description = data.site.siteMetadata.description
     const posts = data.allMarkdownRemark.edges
+
+    console.log(data)
 
     return (
       <Layout
@@ -24,12 +25,12 @@ class JournalIndex extends React.Component {
           <Wrapper>
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
+              console.log(node)
               return (
                 <Box maxWidth="600px" pb={4} key={node.fields.slug}>
                   <Text is="h3" fontSize={[3,5]} m={0} pb={1}>
-                    <Link to={node.fields.slug}>{title}</Link>
+                    <Link to={`/journal/${node.fields.slug}`}>{title}</Link>
                   </Text>
-                  <Text is="p" color="grayDark" m={0} pb={3} fontSize={1}>By: {node.frontmatter.author || 'Dan Lavin'}</Text>
                   <Text is="p" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
                 </Box>
               )
@@ -52,7 +53,7 @@ export const journalQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: {regex : "\/journal/"} },
+      filter: { fields: { sourceName: { eq: "journal" } } }
 
     ) {
       edges {

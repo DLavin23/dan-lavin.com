@@ -1,17 +1,17 @@
 import React from 'react'
+import system from '@rebass/components'
 import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 import './layout.css'
 import theme from '../theme'
-import system from 'system-components'
 import Header from './header'
 import Footer from './footer'
 
 
 const PageWrapper = system({
-  is: 'div',
+  as: 'div',
   bg: 'white',
 },
   'bg',
@@ -19,7 +19,7 @@ const PageWrapper = system({
 )
 
 const Main = system({
-  is: 'main',
+  as: 'main',
 })
 
 const Layout = ({ children, pageBackground, pageColor}) => (

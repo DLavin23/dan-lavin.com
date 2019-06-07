@@ -1,8 +1,8 @@
-import system from 'system-components'
+import system from '@rebass/components'
 
 const Tag = system(
   {
-    is: 'div',
+    as: 'div',
     bg: 'white',
     border: '1px solid',
     borderColor: 'grayLight',

@@ -2,12 +2,11 @@ import React from 'react'
 // import { graphql } from "gatsby"
 import { Link } from 'gatsby'
 // import { Moon, Sunrise, Sun } from 'react-feather'
-import Box from '../components/box'
+import { Box, Text } from 'rebass'
 import ContactLinks from '../components/contact-links'
 import Section from '../components/section'
 import Highlight from '../components/highlight'
 import Layout from '../components/layout'
-import Text from '../components/text'
 import UILink from '../components/ui-link'
 import Wrapper from '../components/wrapper'
 

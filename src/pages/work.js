@@ -1,7 +1,7 @@
 import React from 'react'
+import { Text } from 'rebass'
 import Layout from '../components/layout'
 import Section from '../components/section'
-import Text from '../components/text'
 import Wrapper from '../components/wrapper'
 
 const Work = () => (

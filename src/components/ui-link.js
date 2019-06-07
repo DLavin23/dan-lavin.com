@@ -1,8 +1,8 @@
-import system from 'system-components'
+import system from '@rebass/components'
 import { Link } from 'gatsby'
 
 const UILink = system({
-  is: Link,
+  as: Link,
 },
   {
     textDecoration: 'none',
@@ -18,7 +18,7 @@ const UILink = system({
 
 UILink.External = system(
   {
-    is: 'a',
+    as: 'a',
     color: 'purple'
   },
   'alignItems',

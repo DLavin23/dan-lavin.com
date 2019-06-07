@@ -1,7 +1,6 @@
 import React from 'react'
+import { Box, Text } from 'rebass'
 import Layout from '../components/layout'
-import Box from '../components/box'
-import Text from '../components/text'
 import Wrapper from '../components/wrapper'
 import Section from '../components/section'
 import SectionHeader from '../components/section-header'

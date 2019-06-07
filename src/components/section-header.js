@@ -1,13 +1,13 @@
 import React from 'react'
-import system from 'system-components'
+import system from '@rebass/components'
 
 const Header = system({
-  is: 'div',
+  as: 'div',
   mb: 3,
 })
 
 const Title = system({
-  is: 'h3',
+  as: 'h3',
   color: 'offBlack',
   fontSize: 6,
   m: 0,
@@ -15,7 +15,7 @@ const Title = system({
 })
 
 const BottomBorder = system({
-  is: 'div',
+  as: 'div',
   border: '2px solid',
   borderColor: 'grayLight',
 },

@@ -1,9 +1,9 @@
 import React from 'react'
-import system from 'system-components'
+import system from '@rebass/components'
 import { GitHub, Linkedin, Codepen, Twitter, Instagram } from 'react-feather'
 
 const ContactList = system({
-  is: 'ul',
+  as: 'ul',
   display: 'flex',
   m: 0,
   p: 0,
@@ -12,12 +12,12 @@ const ContactList = system({
 })
 
 const ContactListItem = system({
-  is: 'li',
+  as: 'li',
   pr: 3,
 })
 
 const ContactLink = system({
-  is: 'a',
+  as: 'a',
   color: 'offBlack',
 })
 

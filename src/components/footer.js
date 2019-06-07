@@ -1,17 +1,17 @@
 import React from 'react'
-import system from 'system-components'
-import Box from '../components/box'
+import system from '@rebass/components'
+import { Box } from 'rebass'
 import Wrapper from '../components/wrapper'
 
 const UIFooter = system({
-  is: 'footer',
+  as: 'footer',
   bg: 'offWhite',
   py: 3,
   width: '100%',
 })
 
 const FooterGreeting = system({
-  is: 'span',
+  as: 'span',
 })
 
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']

@@ -1,8 +1,8 @@
-import system from 'system-components'
+import system from '@rebass/components'
 
 const Divider = system(
   {
-    is: 'div',
+    as: 'div',
     borderBottom: '6px solid',
     borderColor: 'green',
     color: 'green',

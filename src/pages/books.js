@@ -1,9 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Box from '../components/box'
+import { Box, Text } from 'rebass'
 import Section from '../components/section'
 import Layout from "../components/layout"
-import Text from '../components/text'
 import Wrapper from '../components/wrapper'
 
 class BookIndex extends React.Component {
@@ -12,6 +11,7 @@ class BookIndex extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     const description = data.site.siteMetadata.description
     const posts = data.allMarkdownRemark.edges
+
     return (
       <Layout
         location={this.props.location}
@@ -32,7 +32,7 @@ class BookIndex extends React.Component {
                 <Box maxWidth="600px" pb={4} key={node.fields.slug}>
                   {/* <Tag>{tags.length > 1 ? renderMultipleTags : tags}</Tag> */}
                   <Text is="h3" fontSize={[3,5]} m={0} pb={1}>
-                    <Link to={node.fields.slug}>{title}</Link>
+                    <Link to={`/books/${node.fields.slug}`}>{title}</Link>
                   </Text>
                   <Text is="p" color="grayDark" m={0} pb={3} fontSize={1}>
                     Written by: {authors.length > 1 ? renderMultipleAuthors : authors}
@@ -59,7 +59,7 @@ export const bookQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: {regex : "\/books/"} },
+      filter: { fields: { sourceName: { eq: "books" } } }
 
     ) {
       edges {

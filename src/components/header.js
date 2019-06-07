@@ -1,27 +1,26 @@
 import React from 'react'
+import system from '@rebass/components'
+import { Box } from 'rebass'
 import { Link } from 'gatsby'
 import { AtSign } from 'react-feather'
-// import { themeGet } from 'styled-system'
-import system from 'system-components'
-import Box from '../components/box'
 import Wrapper from '../components/wrapper'
 
 const UIHeader = system({
-  is: 'header',
+  as: 'header',
   bg: 'offWhite',
   py: 3,
   w: 1,
 })
 
 const Logo = system({
-  is: 'h1',
+  as: 'h1',
   m: 0,
   fontSize: 4,
   width: ['auto', '25%']
 })
 
 const LogoLink = system({
-  is: 'a',
+  as: 'a',
   alignItems: 'center',
   color: 'offBlack',
   display: 'flex',
@@ -33,7 +32,7 @@ const LogoLink = system({
 
 const NavLink = system(
   {
-    is: 'li',
+    as: 'li',
     color: 'offBlack',
     fontSize: 3,
     fontWeight: 400,
@@ -48,7 +47,7 @@ const NavLink = system(
 
 // TODO: refactor and move to separate component
 const Nav = system({
-  is: 'nav',
+  as: 'nav',
   display: 'flex'
 })
 
