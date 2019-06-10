@@ -8,7 +8,7 @@ const Work = () => (
   <Layout>
     <Section>
       <Wrapper>
-        <Text is="h2">
+        <Text as="h2">
           Coming Soon!
         </Text>
       </Wrapper>

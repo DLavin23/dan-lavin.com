@@ -31,13 +31,13 @@ class BookIndex extends React.Component {
               return (
                 <Box maxWidth="600px" pb={4} key={node.fields.slug}>
                   {/* <Tag>{tags.length > 1 ? renderMultipleTags : tags}</Tag> */}
-                  <Text is="h3" fontSize={[3,5]} m={0} pb={1}>
+                  <Text as="h3" fontSize={[3,5]} m={0} pb={1}>
                     <Link to={`/books/${node.fields.slug}`}>{title}</Link>
                   </Text>
-                  <Text is="p" color="grayDark" m={0} pb={3} fontSize={1}>
+                  <Text as="p" color="grayDark" m={0} pb={3} fontSize={1}>
                     Written by: {authors.length > 1 ? renderMultipleAuthors : authors}
                   </Text>
-                  <Text is="p" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                  <Text as="p" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
                 </Box>
               )
             })}

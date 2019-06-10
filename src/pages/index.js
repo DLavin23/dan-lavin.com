@@ -23,7 +23,7 @@ const getWelcomeMessage = () => {
       >
 
         {/* <Sunrise /> */}
-        <Box is="span">Good Morning, I'm Dan!</Box>
+        <Box as="span">Good Morning, I'm Dan!</Box>
       </Box>
     )
 
@@ -31,24 +31,24 @@ const getWelcomeMessage = () => {
   if (currentHour >= 12 && currentHour < 17) {
     return (
       <Box
-        is="div"
+        as="div"
         alignItems="center"
         display="flex"
       >
 
         {/* <Sun /> */}
-        <Box is="span">Good Afternoon, I'm Dan!</Box>
+        <Box as="span">Good Afternoon, I'm Dan!</Box>
       </Box>
     )
   } else {
     return (
       <Box
-        is="div"
+        as="div"
         alignItems="center"
         display="flex"
       >
         {/* <Moon /> */}
-        <Box is="span">Good Evening, I'm Dan!</Box>
+        <Box as="span">Good Evening, I'm Dan!</Box>
       </Box>
     )
   }
@@ -61,7 +61,7 @@ export default () => {
         <Wrapper>
           <Box width={['1','75%']}>
             <Text
-              is="h4"
+              as="h4"
               fontSize={[3,4,5]}
               lineHeight="1.25"
               mb={0}
@@ -70,7 +70,7 @@ export default () => {
               {getWelcomeMessage()}
             </Text>
             <Text
-              is="h2"
+              as="h2"
               fontSize={[6,7,8]}
               lineHeight="1.25"
               mb={0}
@@ -78,7 +78,7 @@ export default () => {
             >
               I'm a <Highlight>product</Highlight> leader with a passion for design, development &amp; user experience.
             </Text>
-            <Text is="p" fontSize={[3,4]} color="offBlack" mb={4} >
+            <Text as="p" fontSize={[3,4]} color="offBlack" mb={4} >
               Currently, I lead product at <UILink.External href="https://www.hatchloyalty.com/" target="_blank" rel="noopener noreferrer">Hatch</UILink.External> where our team is focused on building a technology platform that helps businesses create stronger, more personal relationships with their customers. If you're interested in a slightly longer version, click <Link to="/about">here.</Link>
             </Text>
             <ContactLinks />

@@ -1,66 +1,92 @@
 import React from 'react'
 import system from '@rebass/components'
-import { Box } from 'rebass'
+import { Box, Flex } from 'rebass'
 import { Link } from 'gatsby'
 import { AtSign } from 'react-feather'
 import Wrapper from '../components/wrapper'
 
-const UIHeader = system({
-  as: 'header',
-  bg: 'offWhite',
-  py: 3,
-  w: 1,
-})
+const UIHeader = system(
+  {
+    as: 'header',
+    bg: 'offWhite',
+    py: 3,
+    width: 1,
+  },
+  'color',
+  'space',
+  'width',
+)
 
-const Logo = system({
-  as: 'h1',
-  m: 0,
-  fontSize: 4,
-  width: ['auto', '25%']
-})
+const Logo = system(
+  {
+    as: 'h1',
+    m: 0,
+    fontSize: 4,
+    width: ['auto', '25%']
+  },
+  'fontSize',
+  'space',
+  'width',
+)
 
-const LogoLink = system({
-  as: 'a',
-  alignItems: 'center',
-  color: 'offBlack',
-  display: 'flex',
-  fontWeight: '700',
-},
-{
-  textDecoration: 'none'
-})
+const LogoLink = system(
+  {
+    as: 'a',
+    alignItems: 'center',
+    color: 'offBlack',
+    display: 'flex',
+    fontWeight: '700',
+  },
+  {
+    textDecoration: 'none'
+  },
+  'alignItems',
+  'color',
+  'display',
+  'fontWeight',
+  'space',
+  'width',
+)
 
 const NavLink = system(
   {
     as: 'li',
     color: 'offBlack',
+    display: 'inline-flex',
     fontSize: 3,
     fontWeight: 400,
-    display: 'inline-flex',
     px: 2,
     m: 0,
   },
   {
     listStyleType: 'none',
-  }
+  },
+  'color',
+  'display',
+  'fontSize',
+  'fontWeight',
+  'space',
 )
 
 // TODO: refactor and move to separate component
-const Nav = system({
-  as: 'nav',
-  display: 'flex'
-})
+const Nav = system(
+  {
+    as: 'nav',
+    display: 'flex'
+  },
+  'display'
+)
 
 const Header = ({ siteTitle, navLinks }) => (
   <UIHeader>
     <Wrapper>
-      <Box display="flex" alignItems="center" justifyContent="space-between">
+      <Flex alignItems="center" justifyContent="space-between">
         <Logo>
           <LogoLink
             href="/"
           >
             <AtSign size={20} color="#999" />
-            <Box is="span" px={1}>{siteTitle}</Box>
+            <Box as="span" px={1}>{siteTitle}</Box>
           </LogoLink>
         </Logo>
         <Nav>
@@ -80,7 +106,7 @@ const Header = ({ siteTitle, navLinks }) => (
             )
           }
         </Nav>
-      </Box>
+      </Flex>
     </Wrapper>
   </UIHeader>
 )

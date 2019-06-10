@@ -8,7 +8,7 @@ const Principles = () => (
   <Layout>
     <Section>
       <Wrapper>
-        <Text is="h2">
+        <Text as="h2">
           Coming Soon!
           {/* https://about.gitlab.com/handbook/values/ */}
         </Text>

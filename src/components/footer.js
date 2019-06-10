@@ -3,12 +3,17 @@ import system from '@rebass/components'
 import { Box } from 'rebass'
 import Wrapper from '../components/wrapper'
 
-const UIFooter = system({
-  as: 'footer',
-  bg: 'offWhite',
-  py: 3,
-  width: '100%',
-})
+const UIFooter = system(
+  {
+    as: 'footer',
+    bg: 'offWhite',
+    py: 3,
+    width: '100%',
+  },
+  'color',
+  'space',
+  'width'
+)
 
 const FooterGreeting = system({
   as: 'span',

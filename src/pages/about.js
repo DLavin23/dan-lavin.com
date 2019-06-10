@@ -12,7 +12,7 @@ const About = () => (
         <Box display={['block', 'flex']}>
           <Box width={['100%','80%']}>
             <Text
-              is="h3"
+              as="h3"
               fontSize={6}
               mb={3}
             >

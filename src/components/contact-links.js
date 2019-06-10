@@ -2,24 +2,34 @@ import React from 'react'
 import system from '@rebass/components'
 import { GitHub, Linkedin, Codepen, Twitter, Instagram } from 'react-feather'
 
-const ContactList = system({
-  as: 'ul',
-  display: 'flex',
-  m: 0,
-  p: 0,
-},{
-  listStyle: 'none'
-})
+const ContactList = system(
+  {
+    as: 'ul',
+    display: 'flex',
+    m: 0,
+    p: 0,
+  },{
+    listStyle: 'none'
+  },
+  'display',
+  'space',
+)
 
-const ContactListItem = system({
-  as: 'li',
-  pr: 3,
-})
+const ContactListItem = system(
+  {
+    as: 'li',
+    pr: 3,
+  },
+  'space'
+)
 
-const ContactLink = system({
-  as: 'a',
-  color: 'offBlack',
-})
+const ContactLink = system(
+  {
+    as: 'a',
+    color: 'offBlack',
+  },
+  'color'
+)
 
 const renderContactLinks = () => {
   const socialLinks = [

@@ -6,7 +6,9 @@ const Wrapper = system({
   m: '0 auto',
   px: [3,4],
 },
-  'maxWidth'
+  'maxWidth',
+  'space',
+  'width',
 )
 
 export default Wrapper
