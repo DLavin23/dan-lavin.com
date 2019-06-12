@@ -2,8 +2,8 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Box, Text } from 'rebass'
 import Layout from '../components/layout'
-import Section from '../components/section'
 import Wrapper from '../components/wrapper'
+import Blockquote from '../components/blockquote'
 
 
 class JournalTemplate extends React.Component {
@@ -18,22 +18,32 @@ class JournalTemplate extends React.Component {
         pageBackground="offWhite"
         pageColor="offBlack"
       >
-        <Section>
+        <Box py={[4,5]}>
           <Wrapper
             maxWidth="700px"
           >
             <Box py={4}>
               <Text
-                is="h1"
+                as="h1"
                 fontSize={[7,8,9]}
               >
               {post.frontmatter.title}
             </Text>
+            <Text
+              as="p"
+              fontSize={[3,4]}
+            >
+              Written {post.frontmatter.date}
+            </Text>
             </Box>
+
+            <Blockquote>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo voluptatem, odit dolores dolore assumenda debitis at quod laudantium in! Nulla earum architecto assumenda possimus, excepturi saepe nemo ex vero aut?
+            </Blockquote>
 
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
           </Wrapper>
-        </Section>
+        </Box>
       </Layout>
     )
   }

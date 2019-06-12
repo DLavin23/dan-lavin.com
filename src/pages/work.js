@@ -1,18 +1,17 @@
 import React from 'react'
-import { Text } from 'rebass'
+import { Box, Text } from 'rebass'
 import Layout from '../components/layout'
-import Section from '../components/section'
 import Wrapper from '../components/wrapper'
 
 const Work = () => (
   <Layout>
-    <Section>
+    <Box py={[4,5]}>
       <Wrapper>
         <Text as="h2">
           Coming Soon!
         </Text>
       </Wrapper>
-    </Section>
+    </Box>
   </Layout>
 )
 

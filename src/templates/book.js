@@ -2,7 +2,6 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Box, Text } from 'rebass'
 import Layout from '../components/layout'
-import Section from '../components/section'
 import Wrapper from '../components/wrapper'
 
 class BookTemplate extends React.Component {
@@ -17,7 +16,7 @@ class BookTemplate extends React.Component {
         pageBackground="white"
         pageColor="offBlack"
       >
-        <Section>
+        <Box py={[4,5]}>
           <Wrapper
             maxWidth="700px"
           >
@@ -32,7 +31,7 @@ class BookTemplate extends React.Component {
 
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
           </Wrapper>
-        </Section>
+        </Box>
       </Layout>
     )
   }

@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 // import { Moon, Sunrise, Sun } from 'react-feather'
 import { Box, Text } from 'rebass'
 import ContactLinks from '../components/contact-links'
-import Section from '../components/section'
 import Highlight from '../components/highlight'
 import Layout from '../components/layout'
 import UILink from '../components/ui-link'
@@ -57,7 +56,7 @@ const getWelcomeMessage = () => {
 export default () => {
   return (
     <Layout pageBackground="offWhite">
-      <Section color="offBlack">
+      <Box py={[4,5]} color="offBlack">
         <Wrapper>
           <Box width={['1','75%']}>
             <Text
@@ -83,12 +82,8 @@ export default () => {
             </Text>
             <ContactLinks />
           </Box>
-
-          <Section>
-
-          </Section>
         </Wrapper>
-      </Section>
+      </Box>
     </Layout>
   )
 }

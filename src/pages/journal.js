@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { Box, Text } from 'rebass'
 import Layout from "../components/layout"
-import Section from '../components/section'
 import Wrapper from '../components/wrapper'
 
 class JournalIndex extends React.Component {
@@ -12,8 +11,6 @@ class JournalIndex extends React.Component {
     const description = data.site.siteMetadata.description
     const posts = data.allMarkdownRemark.edges
 
-    console.log(data)
-
     return (
       <Layout
         location={this.props.location}
@@ -21,7 +18,7 @@ class JournalIndex extends React.Component {
         desc={description}
         pageBackground="offWhite"
       >
-        <Section>
+        <Box py={[4,5]}>
           <Wrapper>
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
@@ -36,7 +33,7 @@ class JournalIndex extends React.Component {
               )
             })}
           </Wrapper>
-        </Section>
+        </Box>
       </Layout>
     )
   }

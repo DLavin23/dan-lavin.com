@@ -1,5 +1,6 @@
 import React from 'react'
 import system from '@rebass/components'
+import { themeGet } from 'styled-system'
 import { GitHub, Linkedin, Codepen, Twitter, Instagram } from 'react-feather'
 
 const ContactList = system(
@@ -26,9 +27,24 @@ const ContactListItem = system(
 const ContactLink = system(
   {
     as: 'a',
+
+    bg: 'white',
+    borderRadius: '100%',
+    boxShadow: 1,
     color: 'offBlack',
+    display: 'flex',
+    p: 2,
   },
-  'color'
+  props => ({
+    '&:hover': {
+      boxShadow: `${themeGet('shadows.2')(props)}`,
+    }
+  }),
+  'borderRadius',
+  'boxShadow',
+  'color',
+  'display',
+  'space',
 )
 
 const renderContactLinks = () => {
@@ -36,27 +52,27 @@ const renderContactLinks = () => {
     {
       title: 'Github',
       location: 'https://github.com/DLavin23/',
-      icon: <GitHub />,
+      icon: <GitHub size={16} />,
     },
     {
       title: 'Linkedin',
       location: 'https://www.linkedin.com/in/lavindan',
-      icon: <Linkedin />,
+      icon: <Linkedin size={16} />,
     },
     {
       title: 'Codepen',
       location: 'http://codepen.io/DLavin23/',
-      icon: <Codepen />,
+      icon: <Codepen size={16} />,
     },
     {
       title: 'Twitter',
       location: 'https://twitter.com/danlavin',
-      icon: <Twitter />,
+      icon: <Twitter size={16} />,
     },
     {
       title: 'Instagram',
       location: 'https://instagram.com/dlavin',
-      icon: <Instagram />,
+      icon: <Instagram size={16} />,
     },
   ]
 

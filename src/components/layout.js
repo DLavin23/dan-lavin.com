@@ -14,7 +14,6 @@ const PageWrapper = system({
   as: 'div',
   bg: 'white',
 },
-  'bg',
   'color',
 )
 
