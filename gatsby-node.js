@@ -10,6 +10,7 @@ const { createFilePath } = require('gatsby-source-filesystem')
 
 const { createPages: createBookPages } = require('./config/book-setup')
 const { createPages: createJournalPages } = require('./config/journal-setup')
+const { createPages: createWorkPages } = require('./config/work-setup')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -18,6 +19,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   setupSteps.push(createBookPages(graphql, createPage))
   setupSteps.push(createJournalPages(graphql, createPage))
+  setupSteps.push(createWorkPages(graphql, createPage))
 
   return Promise.all(setupSteps)
 }
