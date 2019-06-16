@@ -19,7 +19,6 @@ const UILink = system({
 UILink.External = system(
   {
     as: 'a',
-    color: 'purple'
   },
   'alignItems',
   'color',

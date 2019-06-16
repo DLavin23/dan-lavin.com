@@ -8,7 +8,7 @@ import Wrapper from '../components/wrapper'
 const UIHeader = system(
   {
     as: 'header',
-    bg: 'offWhite',
+    bg: 'white',
     py: 3,
     width: 1,
   },

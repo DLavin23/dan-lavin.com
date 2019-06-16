@@ -2,12 +2,13 @@ import React from 'react'
 // import { graphql } from "gatsby"
 import { Link } from 'gatsby'
 // import { Moon, Sunrise, Sun } from 'react-feather'
-import { Box, Text } from 'rebass'
+import { Box, Flex, Text } from 'rebass'
 import ContactLinks from '../components/contact-links'
-import Highlight from '../components/highlight'
+// import Highlight from '../components/highlight'
 import Layout from '../components/layout'
 import UILink from '../components/ui-link'
 import Wrapper from '../components/wrapper'
+// import Bio from '../images/dan-lavin-bio.png'
 
 // move to seperate file
 const currentDate = new Date()
@@ -55,33 +56,39 @@ const getWelcomeMessage = () => {
 
 export default () => {
   return (
-    <Layout pageBackground="offWhite">
-      <Box py={[4,5]} color="offBlack">
+    <Layout>
+      <Box py={[4,5]} color="">
         <Wrapper>
-          <Box width={['1','75%']}>
-            <Text
-              as="h4"
-              fontSize={[3,4,5]}
-              lineHeight="1.25"
-              mb={0}
-              pb={3}
-            >
-              {getWelcomeMessage()}
-            </Text>
-            <Text
-              as="h2"
-              fontSize={[6,7,8]}
-              lineHeight="1.25"
-              mb={0}
-              pb={3}
-            >
-              I'm a <Highlight>product</Highlight> leader with a passion for design, development &amp; user experience.
-            </Text>
-            <Text as="p" fontSize={[3,4]} color="offBlack" mb={4} >
-              Currently, I lead product at <UILink.External href="https://www.hatchloyalty.com/" target="_blank" rel="noopener noreferrer">Hatch</UILink.External> where our team is focused on building a technology platform that helps businesses create stronger, more personal relationships with their customers. If you're interested in a slightly longer version, click <Link to="/about">here.</Link>
-            </Text>
-            <ContactLinks />
-          </Box>
+          <Flex flexDirection={['column', 'row']}>
+            <Box width={['1','60%']}>
+              <Text
+                as="h4"
+                fontSize={[3,4,5]}
+                lineHeight="1.25"
+                mb={0}
+                pb={3}
+              >
+                {getWelcomeMessage()}
+              </Text>
+              <Text
+                as="h2"
+                fontSize={[6,7,8]}
+                lineHeight="1.25"
+                mb={0}
+                pb={3}
+              >
+                I'm a product leader with a passion for design, development &amp; user experience.
+              </Text>
+              <Text as="p" fontSize={[3,4]} color="" mb={4} >
+                Currently, I lead product at <UILink.External href="https://www.hatchloyalty.com/" target="_blank" rel="noopener noreferrer">Hatch</UILink.External> where our team is focused on building a technology platform designed to help businesses create stronger, more personal relationships with their customers. If you're interested in a slightly longer version, click <Link to="/about">here.</Link>
+              </Text>
+              <ContactLinks />
+            </Box>
+
+            <Box width={['1','40%']}>
+              {/* <Image src={Bio}/> */}
+            </Box>
+          </Flex>
         </Wrapper>
       </Box>
     </Layout>

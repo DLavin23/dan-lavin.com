@@ -1,15 +1,16 @@
 import React from 'react'
-import { Box, Text } from 'rebass'
+import { Box, Flex, Image, Text } from 'rebass'
 import Layout from '../components/layout'
 import Wrapper from '../components/wrapper'
 import SectionHeader from '../components/section-header'
+import Bio from '../images/dan-lavin-bio.png'
 
 const About = () => (
   <Layout pageBackground="offWhite" pageColor="offBlack">
     <Box py={[4,5]}>
       <Wrapper>
-        <Box mb={5} display={['block', 'flex']}>
-          <Box width={['100%','80%']}>
+        <Flex>
+          <Box width={['100%','60%']}>
             <Text
               as="h3"
               fontSize={6}
@@ -21,7 +22,10 @@ const About = () => (
               I love products that solve real problems. I enjoy design that is both simple and intuitive. I believe that talking to actual customers is the best way to make sure you're building the right product. I embrace change. Failure happens from time to time. That's OK, as long as you learn from your mistakes. I value strong communication. It's impossible to build a great product if design, engineering, and the business are not working as one team. Finally, I approach every problem with an "empty cup" and a "beginners mind".
             </Text>
           </Box>
-        </Box>
+          <Box width={['100%','40%']}>
+            <Image src={Bio}/>
+          </Box>
+        </Flex>
 
         <Box mb={5}>
           <SectionHeader title="Some things I care about" />

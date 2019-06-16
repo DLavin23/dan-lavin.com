@@ -31,7 +31,7 @@ const ContactLink = system(
     bg: 'white',
     borderRadius: '100%',
     boxShadow: 1,
-    color: 'offBlack',
+    color: 'gray700',
     display: 'flex',
     p: 2,
   },

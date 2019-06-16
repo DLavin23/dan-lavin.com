@@ -3,7 +3,7 @@ import system from '@rebass/components'
 const Blockquote = system(
   {
     as: 'blockquote',
-    borderColor: 'grayLight',
+    borderColor: 'purple600',
     borderLeft: '5px solid',
     p: 3,
   },

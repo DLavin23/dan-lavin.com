@@ -24,7 +24,7 @@ class WorkIndex extends React.Component {
               const company = node.frontmatter.company
 
               return (
-                <Box maxWidth="600px" pb={4} key={node.fields.slug}>
+                <Box width={['100%', '600px']} pb={4} key={node.fields.slug}>
                   <Text as="h3" fontSize={[3,5]} m={0} pb={1}>
                     <Link to={`/work/${node.fields.slug}`}>{company}</Link>
                   </Text>

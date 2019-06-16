@@ -1,12 +1,13 @@
 import React from 'react'
 import system from '@rebass/components'
-import { Box } from 'rebass'
+import { Flex } from 'rebass'
+import ContactLinks from '../components/contact-links'
 import Wrapper from '../components/wrapper'
 
 const UIFooter = system(
   {
     as: 'footer',
-    bg: 'offWhite',
+    // bg: '',
     py: 3,
     width: '100%',
   },
@@ -15,9 +16,15 @@ const UIFooter = system(
   'width'
 )
 
-const FooterGreeting = system({
-  as: 'span',
-})
+const FooterGreeting = system(
+  {
+    as: 'span',
+    display: 'block',
+    mb: [2, 0],
+  },
+  'display',
+  'space'
+)
 
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 function HumanReadableDay() {
@@ -27,10 +34,16 @@ function HumanReadableDay() {
 const Footer = () => (
   <UIFooter>
     <Wrapper>
-      <Box display="flex" alignItems="center" justifyContent="space-between">
-        <FooterGreeting>&copy;{new Date().getFullYear()} Happy {HumanReadableDay()}!</FooterGreeting>
-        {/* <ContactLinks /> */}
-      </Box>
+      <Flex
+        alignItems={['flex-start', 'center']}
+        flexDirection={['column', 'row']}
+        justifyContent="space-between"
+      >
+        <FooterGreeting>
+          &copy;{new Date().getFullYear()} Happy {HumanReadableDay()}!
+        </FooterGreeting>
+        <ContactLinks />
+      </Flex>
     </Wrapper>
   </UIFooter>
 )

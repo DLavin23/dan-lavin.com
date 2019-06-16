@@ -24,7 +24,7 @@ class JournalIndex extends React.Component {
               const title = node.frontmatter.title || node.fields.slug
               console.log(node)
               return (
-                <Box maxWidth="600px" pb={4} key={node.fields.slug}>
+                <Box width={['100%', '600px']}  pb={4} key={node.fields.slug}>
                   <Text as="h3" fontSize={[3,5]} m={0} pb={1}>
                     <Link to={`/journal/${node.fields.slug}`}>{title}</Link>
                   </Text>
