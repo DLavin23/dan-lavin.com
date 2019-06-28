@@ -1,6 +1,6 @@
 import React from 'react'
 // import { graphql } from "gatsby"
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 // import { Moon, Sunrise, Sun } from 'react-feather'
 import { Box, Flex, Text } from 'rebass'
 import ContactLinks from '../components/contact-links'
@@ -56,38 +56,43 @@ const getWelcomeMessage = () => {
 
 export default () => {
   return (
-    <Layout>
+    <Layout pageBackground='gray100' pageColor="gray700">
       <Box py={[4,5]} color="">
         <Wrapper>
-          <Flex flexDirection={['column', 'row']}>
-            <Box width={['1','60%']}>
+          <Flex flexDirection={['column', 'row', 'row']}>
+            <Box width={['100%','85%', '65%']}>
               <Text
                 as="h4"
                 fontSize={[3,4,5]}
+                fontWeight="400"
                 lineHeight="1.25"
-                mb={0}
-                pb={3}
+                mb={3}
               >
                 {getWelcomeMessage()}
               </Text>
               <Text
                 as="h2"
-                fontSize={[6,7,8]}
+                fontSize={[6,7,7]}
+                fontWeight="800"
                 lineHeight="1.25"
-                mb={0}
-                pb={3}
+                mb={3}
               >
                 I'm a product leader with a passion for design, development &amp; user experience.
               </Text>
               <Text as="p" fontSize={[3,4]} color="" mb={4} >
-                Currently, I lead product at <UILink.External href="https://www.hatchloyalty.com/" target="_blank" rel="noopener noreferrer">Hatch</UILink.External> where our team is focused on building a technology platform designed to help businesses create stronger, more personal relationships with their customers. If you're interested in a slightly longer version, click <Link to="/about">here.</Link>
+                Currently, I lead product at <UILink.External href="https://www.hatchloyalty.com/" target="_blank" rel="noopener noreferrer">Hatch</UILink.External> where our team is focused on building a technology platform designed to help businesses create stronger, more personal relationships with their customers.
               </Text>
+              <Box mb={4}>
+                <UILink.Button to="/about">
+                  Learn More!
+                </UILink.Button>
+              </Box>
               <ContactLinks />
             </Box>
 
-            <Box width={['1','40%']}>
-              {/* <Image src={Bio}/> */}
-            </Box>
+            {/* <Box width={['100%', '40%']}>
+              <Image src={Bio}/>
+            </Box> */}
           </Flex>
         </Wrapper>
       </Box>

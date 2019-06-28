@@ -6,14 +6,15 @@ import SectionHeader from '../components/section-header'
 import Bio from '../images/dan-lavin-bio.png'
 
 const About = () => (
-  <Layout pageBackground="offWhite" pageColor="offBlack">
+  <Layout pageBackground="gray100" pageColor="gray700">
     <Box py={[4,5]}>
       <Wrapper>
         <Flex>
           <Box width={['100%','60%']}>
             <Text
               as="h3"
-              fontSize={6}
+              fontSize={7}
+              fontWeight="800"
               mb={3}
             >
               Hi, I'm Dan!

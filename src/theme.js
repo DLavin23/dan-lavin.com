@@ -1,3 +1,5 @@
+const borders = [0, '1px solid', '2px solid']
+const breakpoints = ['660px', '860px']
 const colors = {
   black: '#00',
   white: '#ffffff',
@@ -56,31 +58,29 @@ const colors = {
   purple800: '#553C9A',
   purple900: '#44337A',
 }
-
 const fontSizes = [10, 12, 14, 16, 18, 20, 24, 30, 36, 48, 60, 72, 96]
+const fontWeights = {
+  light: 300,
+  normal: 400,
+  bold: 600,
+}
+const listTypes = ['none', 'disc']
+const shadows = [ 'none', '0 1px 2px 0 hsla(0, 0%, 0%, 0.2)', '0 2px 4px 0 hsla(0, 0%, 0%, 0.4)',]
 const space = [0, 4, 8, 16, 32, 64, 128, 256]
-
+const textStyles = {
+  caps: {
+    textTransform: 'uppercase',
+    letterSpacing: '0.2em'
+  }
+}
 export default {
-  borders: [0, '1px solid', '2px solid'],
-  breakpoints: ['600px', '900px'],
+  borders,
+  breakpoints,
   colors,
   fontSizes,
-  fontWeights: {
-    light: 300,
-    normal: 400,
-    bold: 600,
-  },
-  listTypes: ['none', 'disc'],
-  shadows: [
-    'none',
-    '0 1px 2px 0 hsla(0, 0%, 0%, 0.2)',
-    '0 2px 4px 0 hsla(0, 0%, 0%, 0.2)',
-  ],
+  fontWeights,
+  listTypes,
+  shadows,
   space,
-  textStyles: {
-    caps: {
-      textTransform: 'uppercase',
-      letterSpacing: '0.2em'
-    }
-  },
+  textStyles,
 }

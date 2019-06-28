@@ -1,7 +1,8 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { Box, Text } from 'rebass'
-import Layout from "../components/layout"
+import Layout from '../components/layout'
+import UILink from '../components/ui-link'
 import Wrapper from '../components/wrapper'
 
 class JournalIndex extends React.Component {
@@ -16,19 +17,28 @@ class JournalIndex extends React.Component {
         location={this.props.location}
         title={siteTitle}
         desc={description}
-        pageBackground="offWhite"
+        pageBackground="gray100"
+        pageColor="gray700"
       >
         <Box py={[4,5]}>
           <Wrapper>
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
-              console.log(node)
               return (
                 <Box width={['100%', '600px']}  pb={4} key={node.fields.slug}>
-                  <Text as="h3" fontSize={[3,5]} m={0} pb={1}>
-                    <Link to={`/journal/${node.fields.slug}`}>{title}</Link>
-                  </Text>
-                  <Text is="p" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                  <UILink
+                    to={`/journal/${node.fields.slug}`}
+                    color="gray700"
+                    fontSize={[4,5]}
+                    fontWeight="800"
+                  >
+                    {title}
+                  </UILink>
+                  <Text
+                    as="p"
+                    color="gray600"
+                    dangerouslySetInnerHTML={{ __html: node.excerpt }}
+                  />
                 </Box>
               )
             })}

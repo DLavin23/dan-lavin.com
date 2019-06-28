@@ -15,7 +15,7 @@ class JournalTemplate extends React.Component {
         location={this.props.location}
         title={siteTitle}
         pageBackground="offWhite"
-        pageColor="gray600"
+        pageColor="gray700"
       >
         <Box py={[4,5]}>
           <Wrapper

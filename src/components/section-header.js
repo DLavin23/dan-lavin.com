@@ -12,13 +12,15 @@ const Header = system(
 const Title = system(
   {
     as: 'h3',
-    color: 'offBlack',
+    color: 'gray700',
     fontSize: 6,
+    fontWeight: '800',
     m: 0,
     pb: 3,
   },
   'color',
   'fontSize',
+  'fontWeight',
   'space',
 )
 
@@ -26,7 +28,7 @@ const BottomBorder = system(
   {
     as: 'div',
     border: '2px solid',
-    borderColor: 'grayLight',
+    borderColor: 'gray700',
   },
   {
     maxWidth: '4rem',

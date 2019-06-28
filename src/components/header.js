@@ -1,14 +1,14 @@
 import React from 'react'
 import system from '@rebass/components'
-import { Box, Flex } from 'rebass'
+import { themeGet } from 'styled-system'
+import { Flex } from 'rebass'
 import { Link } from 'gatsby'
-import { AtSign } from 'react-feather'
 import Wrapper from '../components/wrapper'
 
 const UIHeader = system(
   {
     as: 'header',
-    bg: 'white',
+    // bg: 'white',
     py: 3,
     width: 1,
   },
@@ -31,15 +31,18 @@ const Logo = system(
 
 const LogoLink = system(
   {
-    as: 'a',
+    as: Link,
     alignItems: 'center',
-    color: 'offBlack',
+    color: 'gray700',
     display: 'flex',
-    fontWeight: '700',
+    fontWeight: '800',
   },
-  {
-    textDecoration: 'none'
-  },
+  props => ({
+    textDecoration: 'none',
+    '&:hover': {
+      color: `${themeGet('colors.teal700')(props)}`
+    }
+  }),
   'alignItems',
   'color',
   'display',
@@ -83,10 +86,9 @@ const Header = ({ siteTitle, navLinks }) => (
       <Flex alignItems="center" justifyContent="space-between">
         <Logo>
           <LogoLink
-            href="/"
+            to="/"
           >
-            <AtSign size={20} color="#999" />
-            <Box as="span" px={1}>{siteTitle}</Box>
+            {siteTitle}
           </LogoLink>
         </Logo>
         <Nav>
