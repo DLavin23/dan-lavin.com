@@ -3,7 +3,6 @@ path: "/it-doesnt-have-to-be-crazy-at-work"
 title: "It Doesn't Have To Be Crazy At Work"
 authors: ["Jason Fried", "DHH"]
 rating: 7
-postType: "review"
 externalLink: ""
 tags: ["non-fiction"]
 ---

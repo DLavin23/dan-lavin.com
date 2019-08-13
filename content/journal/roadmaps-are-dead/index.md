@@ -2,7 +2,6 @@
 path: "/roadmaps-are-dead"
 date: "2019-05-19"
 title: "Roadmaps are dead, long live roadmaps!"
-postType: blog
 tags: ["product management"]
 ---
 

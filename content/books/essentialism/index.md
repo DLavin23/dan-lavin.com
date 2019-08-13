@@ -3,7 +3,6 @@ path: "/essentialism"
 title: "Essentialism"
 authors: ["Greg McKeown"]
 rating: 8
-postType: "review"
 externalLink: "https://www.amazon.com/Essentialism-Disciplined-Pursuit-Greg-McKeown/dp/0804137382"
 tags: ["non-fiction"]
 ---

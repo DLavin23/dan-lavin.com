@@ -3,7 +3,6 @@ path: "/company-of-one"
 title: "Company of One"
 authors: ["Paul Jarvis"]
 rating: 7
-postType: "review"
 externalLink: "https://www.amazon.com/dp/B0076DDBJ6/"
 tags: ["non-fiction"]
 ---
