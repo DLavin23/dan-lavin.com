@@ -1,14 +1,11 @@
 import React from 'react'
-import { Box, Flex, Image, Text } from 'rebass'
+import { Box, Flex, Text } from 'rebass'
 import Layout from '../components/layout'
-import Wrapper from '../components/wrapper'
-import SectionHeader from '../components/section-header'
-import Bio from '../images/dan-lavin-bio.png'
 
 const About = () => (
-  <Layout pageBackground="gray100" pageColor="gray700">
+  <Layout>
     <Box py={[4,5]}>
-      <Wrapper>
+      <div>
         <Flex>
           <Box width={['100%','60%']}>
             <Text
@@ -24,12 +21,12 @@ const About = () => (
             </Text>
           </Box>
           <Box width={['100%','40%']}>
-            <Image src={Bio}/>
+            {/* <Image src={Bio}/> */}
           </Box>
         </Flex>
 
         <Box mb={5}>
-          <SectionHeader title="Some things I care about" />
+          <Text>Some things I care about</Text>
           <ul>
             <li>Building digital products that solve real problems</li>
             <li>Leading product and engineering teams</li>
@@ -40,7 +37,7 @@ const About = () => (
         </Box>
 
         <Box mb={5}>
-          <SectionHeader title="Some things I know how to do" />
+          <Text>Some things I know how to do</Text>
           <ul>
             <li>Product Management</li>
             <li>Product Design</li>
@@ -52,7 +49,7 @@ const About = () => (
         </Box>
 
         <Box mb={5}>
-          <SectionHeader title="Some things I'm trying to improve" />
+          <Text>Some things I'm trying to improve</Text>
           <ul>
             <li>UI and Visual Design</li>
             <li>Systems Thinking</li>
@@ -60,7 +57,7 @@ const About = () => (
             <li>Writing</li>
           </ul>
         </Box>
-      </Wrapper>
+      </div>
     </Box>
   </Layout>
 )

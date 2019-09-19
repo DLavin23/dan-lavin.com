@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { Box, Text } from 'rebass'
 import Layout from "../components/layout"
-import Wrapper from '../components/wrapper'
 
 class BookIndex extends React.Component {
   render() {
@@ -16,10 +15,9 @@ class BookIndex extends React.Component {
         location={this.props.location}
         title={siteTitle}
         desc={description}
-        pageBackground="offWhite"
       >
         <Box py={[4,5]}>
-          <Wrapper>
+          <div>
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
               const authors = node.frontmatter.authors
@@ -40,7 +38,7 @@ class BookIndex extends React.Component {
                 </Box>
               )
             })}
-          </Wrapper>
+          </div>
         </Box>
       </Layout>
     )

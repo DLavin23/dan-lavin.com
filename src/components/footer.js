@@ -1,30 +1,7 @@
 import React from 'react'
-import system from '@rebass/components'
-import { Flex } from 'rebass'
+import { Box, Flex } from 'rebass'
+import Container from './container'
 import ContactLinks from '../components/contact-links'
-import Wrapper from '../components/wrapper'
-
-const UIFooter = system(
-  {
-    as: 'footer',
-    // bg: '',
-    py: 3,
-    width: '100%',
-  },
-  'color',
-  'space',
-  'width'
-)
-
-const FooterGreeting = system(
-  {
-    as: 'span',
-    display: 'block',
-    mb: [2, 0],
-  },
-  'display',
-  'space'
-)
 
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 function HumanReadableDay() {
@@ -32,20 +9,21 @@ function HumanReadableDay() {
 }
 
 const Footer = () => (
-  <UIFooter>
-    <Wrapper>
+  <Box as="footer">
+    <Container>
       <Flex
         alignItems={['flex-start', 'center']}
         flexDirection={['column', 'row']}
         justifyContent="space-between"
+        py={3}
       >
-        <FooterGreeting>
+        <div>
           &copy;{new Date().getFullYear()} Happy {HumanReadableDay()}!
-        </FooterGreeting>
+        </div>
         <ContactLinks />
       </Flex>
-    </Wrapper>
-  </UIFooter>
+    </Container>
+  </Box>
 )
 
 export default Footer

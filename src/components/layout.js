@@ -1,27 +1,14 @@
 import React from 'react'
-import system from '@rebass/components'
+import { StaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { ThemeProvider } from 'styled-components'
-import { StaticQuery, graphql } from 'gatsby'
 import './layout.css'
-import theme from '../theme'
+
+import Container from './container'
 import Header from './header'
 import Footer from './footer'
 
-
-const PageWrapper = system({
-  as: 'div',
-  bg: 'white',
-},
-  'color',
-)
-
-const Main = system({
-  as: 'main',
-})
-
-const Layout = ({ children, pageBackground, pageColor}) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -47,18 +34,17 @@ const Layout = ({ children, pageBackground, pageColor}) => (
         >
           <html lang="en" />
         </Helmet>
-        <ThemeProvider theme={theme}>
-          <PageWrapper bg={pageBackground} color={pageColor}>
-            <Header
-              navLinks={data.site.siteMetadata.navLinks}
-              siteTitle={data.site.siteMetadata.title}
-            />
-            <Main role="main">
-              {children}
-            </Main>
-            <Footer />
-          </PageWrapper>
-        </ThemeProvider>
+        <Header
+          navLinks={data.site.siteMetadata.navLinks}
+          siteTitle={data.site.siteMetadata.title}
+        />
+        <Container
+          as="main"
+          role="main"
+        >
+          {children}
+        </Container>
+        <Footer />
       </>
     )}
   />

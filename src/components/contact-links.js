@@ -1,51 +1,7 @@
 import React from 'react'
-import system from '@rebass/components'
-import { themeGet } from 'styled-system'
+import { Link } from 'gatsby'
+import { Box, Flex } from 'rebass'
 import { GitHub, Linkedin, Codepen, Twitter, Instagram } from 'react-feather'
-
-const ContactList = system(
-  {
-    as: 'ul',
-    display: 'flex',
-    m: 0,
-    p: 0,
-  },{
-    listStyle: 'none'
-  },
-  'display',
-  'space',
-)
-
-const ContactListItem = system(
-  {
-    as: 'li',
-    pr: 3,
-  },
-  'space'
-)
-
-const ContactLink = system(
-  {
-    as: 'a',
-
-    bg: 'white',
-    borderRadius: '100%',
-    boxShadow: 1,
-    color: 'gray700',
-    display: 'flex',
-    p: 2,
-  },
-  props => ({
-    '&:hover': {
-      boxShadow: `${themeGet('shadows.2')(props)}`,
-    }
-  }),
-  'borderRadius',
-  'boxShadow',
-  'color',
-  'display',
-  'space',
-)
 
 const renderContactLinks = () => {
   const socialLinks = [
@@ -78,25 +34,34 @@ const renderContactLinks = () => {
 
   return socialLinks.map(link => {
     return (
-      <ContactListItem
+      <Box
+        as='li'
         key={link.title}
+        bg='primary'
+        color='colors.white'
+        m={2}
       >
-        <ContactLink
+        <Link
           href={link.location}
           title={link.title}
         >
           {link.icon}
-        </ContactLink>
-      </ContactListItem>
+        </Link>
+      </Box>
     )
   })
 }
 
 const ContactLinks = () => {
   return (
-    <ContactList>
+    <Flex
+      as='ul'
+      sx={{
+        listStyle: 'none'
+      }}
+    >
       {renderContactLinks()}
-    </ContactList>
+    </Flex>
   )
 }
 

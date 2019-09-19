@@ -86,8 +86,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'dan-lavin.com',
+        short_name: 'danlavin',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
@@ -95,6 +95,7 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-theme-ui',
     'gatsby-remark-copy-linked-files',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
@@ -102,6 +103,5 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
     'gatsby-remark-source-name',
-    'gatsby-plugin-styled-components',
   ],
 }

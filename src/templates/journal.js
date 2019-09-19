@@ -2,7 +2,6 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Box, Text } from 'rebass'
 import Layout from '../components/layout'
-import Wrapper from '../components/wrapper'
 
 
 class JournalTemplate extends React.Component {
@@ -14,11 +13,9 @@ class JournalTemplate extends React.Component {
       <Layout
         location={this.props.location}
         title={siteTitle}
-        pageBackground="offWhite"
-        pageColor="gray700"
       >
         <Box py={[4,5]}>
-          <Wrapper
+          <div
             maxWidth="700px"
           >
             <Box py={4}>
@@ -37,7 +34,7 @@ class JournalTemplate extends React.Component {
             </Box>
 
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          </Wrapper>
+          </div>
         </Box>
       </Layout>
     )

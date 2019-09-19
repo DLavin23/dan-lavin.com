@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { Box, Text } from 'rebass'
 import Layout from "../components/layout"
-import Wrapper from '../components/wrapper'
 
 class WorkIndex extends React.Component {
   render() {
@@ -19,7 +18,7 @@ class WorkIndex extends React.Component {
         pageBackground="offWhite"
       >
         <Box py={[4,5]}>
-          <Wrapper>
+          <div>
             {jobs.map(({ node }) => {
               const company = node.frontmatter.company
 
@@ -32,7 +31,7 @@ class WorkIndex extends React.Component {
                 </Box>
               )
             })}
-          </Wrapper>
+          </div>
         </Box>
       </Layout>
     )
