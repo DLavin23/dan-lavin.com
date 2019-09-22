@@ -2,22 +2,27 @@ export default {
   initialColorMode: 'light',
   useCustomProperties: false,
   colors: {
-    accent: '#48BB78',
+    accent: '#2D3748',
     background: '#F7FAFC',
-    muted: '#CBD5E0',
-    primary: '#667EEA',
-    secondary: '#7F9CF5',
-    text: '#2D3748',
+    muted: '#A0AEC0',
+    primary: '#319795',
+    secondary: '#63B3ED',
+    text: '#4A5568',
+    white: '#fff',
+    gray100: '#F7FAFC',
+    gray200: '#EDF2F7',
+    gray300: '#E2E8F0',
+    gray400: '#CBD5E0',
+    gray500: '#A0AEC0',
+    gray600: '#718096',
+    gray700: '#4A5568',
+    gray800: '#2D3748',
+    gray900: '#1A202C',
     modes: {
-      light: {
-        text: '#2D3748',
-        background: '#F7FAFC',
-        primary: '#667EEA'
-      },
       dark: {
-        text: '#EDF2F7',
+        text: '#F7FAFC',
         background: '#4A5568',
-        primary: '#38B2AC',
+        primary: '#667EEA',
       }
     },
   },
@@ -32,7 +37,13 @@ export default {
   fontWeights: {
     body: 400,
     heading: 700,
-    bold: 700,
+    bold: 800,
+  },
+  textStyles: {
+    uppercase: {
+      textTransform: 'uppercase',
+      letterSpacing: '0.1em',
+    }
   },
   lineHeights: {
     body: 1.5,
@@ -40,7 +51,17 @@ export default {
   },
   space: [
     0, 4, 8, 16, 32, 64, 128, 256, 512
-  ]
+  ],
+  styles: {
+    a: {
+      color: 'primary',
+      fontSize: 16,
+      fontFamily: 'body',
+      '&:hover': {
+        color: 'primary',
+      }
+    },
+  }
 }
 
 

@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
+import React from 'react'
+import { graphql, Link } from 'gatsby'
 import { Box, Text } from 'rebass'
-import Layout from '../components/layout'
+import { Layout } from '../components'
 
 class JournalIndex extends React.Component {
   render() {

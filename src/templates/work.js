@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Box, Text } from 'rebass'
-import Layout from '../components/layout'
+import { Layout } from '../components'
 
 class WorkTemplate extends React.Component {
   render() {

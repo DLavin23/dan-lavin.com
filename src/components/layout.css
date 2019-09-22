@@ -1,3 +1,10 @@
+
+/* Custom */
+.active-link {
+  border-bottom: '2px solid'
+}
+
+/* Base */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

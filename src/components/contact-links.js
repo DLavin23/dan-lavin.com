@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Box, Flex } from 'rebass'
+import { Box, Flex, Text } from 'rebass'
 import { GitHub, Linkedin, Codepen, Twitter, Instagram } from 'react-feather'
 
 const renderContactLinks = () => {
@@ -8,27 +8,27 @@ const renderContactLinks = () => {
     {
       title: 'Github',
       location: 'https://github.com/DLavin23/',
-      icon: <GitHub size={16} />,
+      icon: <GitHub size={18} />,
     },
     {
       title: 'Linkedin',
       location: 'https://www.linkedin.com/in/lavindan',
-      icon: <Linkedin size={16} />,
+      icon: <Linkedin size={18} />,
     },
     {
       title: 'Codepen',
       location: 'http://codepen.io/DLavin23/',
-      icon: <Codepen size={16} />,
+      icon: <Codepen size={18} />,
     },
     {
       title: 'Twitter',
       location: 'https://twitter.com/danlavin',
-      icon: <Twitter size={16} />,
+      icon: <Twitter size={18} />,
     },
     {
       title: 'Instagram',
       location: 'https://instagram.com/dlavin',
-      icon: <Instagram size={16} />,
+      icon: <Instagram size={18} />,
     },
   ]
 
@@ -37,15 +37,23 @@ const renderContactLinks = () => {
       <Box
         as='li'
         key={link.title}
-        bg='primary'
-        color='colors.white'
+        alignItems='center'
+        justifyContent='center'
+        display='flex'
         m={2}
       >
         <Link
           href={link.location}
           title={link.title}
         >
-          {link.icon}
+          <Text
+            color='muted'
+            sx={{
+              '&:hover, &:focus': { color: 'gray800' },
+            }}
+          >
+            {link.icon}
+          </Text>
         </Link>
       </Box>
     )

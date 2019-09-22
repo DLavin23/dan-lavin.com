@@ -1,7 +1,7 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
 import { Box, Text } from 'rebass'
-import Layout from "../components/layout"
+import { Layout } from '../components'
 
 class WorkIndex extends React.Component {
   render() {

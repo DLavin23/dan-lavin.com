@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import { Link } from 'gatsby'
-import { jsx, useColorMode } from 'theme-ui'
-import { Box, Flex, Text } from 'rebass'
-import ContactLinks from '../components/contact-links'
-import Layout from '../components/layout'
+import { jsx, Styled } from 'theme-ui'
+import { Box, Button, Heading, Text } from 'rebass'
+import { ContactLinks, Layout } from '../components'
 
 // move to seperate file
 const currentDate = new Date()
@@ -45,48 +44,44 @@ const getWelcomeMessage = () => {
 }
 
 export default () => {
-  const [colorMode, setColorMode] = useColorMode()
   return (
     <Layout>
-      <Box py={[4,5]} color="">
-        <Flex flexDirection={['column', 'row', 'row']}>
-          <Box width={['100%','85%', '65%']}>
-            <Text
-              as="h4"
-              fontSize={[3,4,5]}
-              fontWeight="400"
-              lineHeight="1.25"
-              mb={3}
-            >
-              {getWelcomeMessage()}
-            </Text>
-            <Text
-              as="h2"
-              fontSize={[6,7,7]}
-              fontWeight="800"
-              lineHeight="1.25"
-              mb={3}
-            >
-              I'm a product leader with a passion for design, development &amp; user experience.
-            </Text>
-            <Text as="p" color="primary" fontSize={[3,4]} mb={4} >
-              Currently, I lead product at <a href="https://www.hatchloyalty.com/" target="_blank" rel="noopener noreferrer">Hatch</a> where our team is focused on building a technology platform designed to help businesses create stronger, more personal relationships with their customers.
-            </Text>
-            <Box mb={4}>
-              <Link to="/about">
-                Learn More!
-              </Link>
-            </Box>
-            <ContactLinks />
+      <Box py={5} width={['100%','85%', '65%']}>
+        <Heading
+          as="h4"
+          fontSize={[3,4,5]}
+          fontWeight="400"
+          lineHeight="1.25"
+          mb={3}
+        >
+          {getWelcomeMessage()}
+        </Heading>
+        <Heading
+          as="h2"
+          fontSize={[6,7,7]}
+          fontWeight="800"
+          lineHeight="1.25"
+          mb={3}
+        >
+          I'm a product leader with a passion for design, development &amp; user experience.
+        </Heading>
+        <Text as="p" color="text" fontSize={[3,4]} mb={4} fontFamily="body">
+          Currently, I lead product at <Styled.a href="https://www.hatchloyalty.com/" target="_blank" rel="noopener noreferrer">Hatch</Styled.a> where our team is focused on building a technology platform designed to help businesses create stronger, more personal relationships with their customers.
+        </Text>
 
-            <button
-              onClick={e => {
-                setColorMode(colorMode === 'default' ? 'dark' : 'default')
-              }}>
-              Toggle {colorMode === 'default' ? 'Dark' : 'Light'}
-            </button>
-          </Box>
-        </Flex>
+        <Link to="/about">
+          <Button
+            fontSize={1}
+            fontWeight='bold'
+            fontFamily='Open Sans'
+          >
+            Learn More!
+          </Button>
+        </Link>
+
+        <Box py={4}>
+          <ContactLinks />
+        </Box>
       </Box>
     </Layout>
   )

@@ -1,6 +1,12 @@
-// import system from '@rebass/components'
-// import { Link } from 'gatsby'
-// import { themeGet } from 'styled-system'
+import { Link } from 'gatsby'
+import styled from '@emotion/styled'
+
+const UILink = styled(Link)(
+  props => ({
+    fontSize: props.fontSize,
+    textDecoration: 'none',
+  })
+)
 
 // const UILink = system(
 //   {
@@ -63,4 +69,4 @@
 //   'textDecoration',
 // )
 
-// export default UILink
+export default UILink

@@ -3,10 +3,6 @@ module.exports = {
     title: 'Dan Lavin',
     navLinks: [
       {
-        name: 'home',
-        link: '/',
-      },
-      {
         name: 'about',
         link: '/about',
       },
