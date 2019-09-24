@@ -1,76 +1,75 @@
 import React from 'react'
-import system from 'system-components'
+import { Box, Flex, Text } from 'rebass'
 import { GitHub, Linkedin, Codepen, Twitter, Instagram } from 'react-feather'
-
-const ContactList = system({
-  is: 'ul',
-  display: 'flex',
-  m: 0,
-  p: 0,
-},{
-  listStyle: 'none'
-})
-
-const ContactListItem = system({
-  is: 'li',
-  pr: 3,
-})
-
-const ContactLink = system({
-  is: 'a',
-  color: 'offBlack',
-})
 
 const renderContactLinks = () => {
   const socialLinks = [
     {
       title: 'Github',
       location: 'https://github.com/DLavin23/',
-      icon: <GitHub />,
+      icon: <GitHub size={18} />,
     },
     {
       title: 'Linkedin',
       location: 'https://www.linkedin.com/in/lavindan',
-      icon: <Linkedin />,
+      icon: <Linkedin size={18} />,
     },
     {
       title: 'Codepen',
       location: 'http://codepen.io/DLavin23/',
-      icon: <Codepen />,
+      icon: <Codepen size={18} />,
     },
     {
       title: 'Twitter',
       location: 'https://twitter.com/danlavin',
-      icon: <Twitter />,
+      icon: <Twitter size={18} />,
     },
     {
       title: 'Instagram',
       location: 'https://instagram.com/dlavin',
-      icon: <Instagram />,
+      icon: <Instagram size={18} />,
     },
   ]
 
   return socialLinks.map(link => {
     return (
-      <ContactListItem
+      <Box
+        as='li'
         key={link.title}
+        alignItems='center'
+        justifyContent='center'
+        display='flex'
+        p={2}
       >
-        <ContactLink
+        <a
           href={link.location}
           title={link.title}
         >
-          {link.icon}
-        </ContactLink>
-      </ContactListItem>
+          <Text
+            color='muted'
+            sx={{
+              '&:hover, &:focus': { color: 'gray800' },
+            }}
+          >
+            {link.icon}
+          </Text>
+        </a>
+      </Box>
     )
   })
 }
 
 const ContactLinks = () => {
   return (
-    <ContactList>
+    <Flex
+      as='ul'
+      mx={-2}
+      sx={{
+        listStyle: 'none'
+      }}
+    >
       {renderContactLinks()}
-    </ContactList>
+    </Flex>
   )
 }
 

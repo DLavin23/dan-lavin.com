@@ -1,20 +1,20 @@
-import React from 'react'
+import * as React from 'react'
 import { graphql } from 'gatsby'
-import Box from '../components/box'
-import Layout from '../components/layout'
-import Section from '../components/section'
-import Text from '../components/text'
-import Wrapper from '../components/wrapper'
+import { Box, Text } from 'rebass'
+import { Layout } from '../components'
 
-class PostTemplate extends React.Component {
+class BookTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
+    const post = this.props.data.post
     const siteTitle = this.props.data.site.siteMetadata.title
 
     return (
-      <Layout location={this.props.location} title={siteTitle} pageBackground="offWhite" pageColor="offBlack">
-        <Section>
-          <Wrapper
+      <Layout
+        location={this.props.location}
+        title={siteTitle}
+      >
+        <Box py={[4,5]}>
+          <div
             maxWidth="700px"
           >
             <Box py={4}>
@@ -27,30 +27,33 @@ class PostTemplate extends React.Component {
             </Box>
 
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          </Wrapper>
-        </Section>
+          </div>
+        </Box>
       </Layout>
     )
   }
 }
 
-export default PostTemplate
+export default BookTemplate
 
 export const pageQuery = graphql`
-  query PostBySlug($slug: String!) {
+  query($slug: String!) {
     site {
       siteMetadata {
         title
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
+    post: markdownRemark(fields: { slug: { eq: $slug } }) {
       excerpt(pruneLength: 160)
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
+      fields {
+        slug
       }
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        tags
+        title
+      }
+      html
     }
   }
 `

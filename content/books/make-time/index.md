@@ -3,8 +3,6 @@ path: "/make-time"
 title: "Make Time"
 authors: ["Jake Knapp", "John Zeratsky"]
 rating: 7
-postType: "review"
-externalLink: ""
 tags: ["non-fiction"]
 ---
 

@@ -2,7 +2,7 @@
 path: "/learning-animation"
 date: "2018-10-16"
 title: "Learning Animation With Bob Ross"
-postType: blog
+featured: true
 tags: ["programming"]
 ---
 
@@ -28,12 +28,11 @@ lot similarities between painting and front end development, especially when you
 started. Trying to learn everything at once is impossible, but if take your time, follow your
 passion, and keep practicing, the possibilities are endless.
 
-<div class="pa4">
-  <blockquote class="athelas ml0 mt0 pl4 black-90 bl bw2 b--blue">
-    <p class="f5 f4-m f3-l lh-copy measure mt0">"Talent is a pursued interest. Anything that you're willing to practice, you can do."</p>
-    <cite class="f6 ttu tracked fs-normal">- Bob Ross</cite>
-  </blockquote>
-</div>
+
+<blockquote>
+  <p>"Talent is a pursued interest. Anything that you're willing to practice, you can do."</p>
+  <cite>- Bob Ross</cite>
+</blockquote>
 
 With that said, lets see if we can channel our inner Bob Ross, as we attempt to take a challenging
 subject like CSS animation and make it less daunting. Our goal is to create this beautiful animated

@@ -1,19 +1,15 @@
 import React from 'react'
-import Layout from '../components/layout'
-import Section from '../components/section'
-import Text from '../components/text'
-import Wrapper from '../components/wrapper'
+import { Box, Text } from 'rebass'
+import { Layout } from '../components'
 
 const Principles = () => (
   <Layout>
-    <Section>
-      <Wrapper>
-        <Text is="h2">
-          Coming Soon!
-          {/* https://about.gitlab.com/handbook/values/ */}
-        </Text>
-      </Wrapper>
-    </Section>
+    <Box py={[4,5]}>
+      <Text as="h2">
+        Coming Soon!
+        {/* https://about.gitlab.com/handbook/values/ */}
+      </Text>
+    </Box>
   </Layout>
 )
 

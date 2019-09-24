@@ -1,10 +1,7 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Box from '../components/box'
-import Section from '../components/section'
-import Layout from "../components/layout"
-import Text from '../components/text'
-import Wrapper from '../components/wrapper'
+import React from 'react'
+import { Link, graphql } from 'gatsby'
+import { Box, Text } from 'rebass'
+import { Layout } from '../components'
 
 class BookIndex extends React.Component {
   render() {
@@ -12,37 +9,38 @@ class BookIndex extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     const description = data.site.siteMetadata.description
     const posts = data.allMarkdownRemark.edges
+
     return (
       <Layout
         location={this.props.location}
         title={siteTitle}
         desc={description}
-        pageBackground="offWhite"
       >
-        <Section>
-          <Wrapper>
+        <Box py={[4,5]}>
+          <div>
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
               const authors = node.frontmatter.authors
               // const tags = node.frontmatter.tags
               // const renderMultipleTags = tags.map(tag => `${tag}, `)
-              const renderMultipleAuthors = authors.map(author => `${author}, `)
+              // const renderMultipleAuthors = authors.length > 1 ? authors.join() : authors
+              const renderMultipleAuthors = authors.map(author => author)
 
               return (
-                <Box maxWidth="600px" pb={4} key={node.fields.slug}>
+                <Box width={['100%', '600px']} pb={4} key={node.fields.slug}>
                   {/* <Tag>{tags.length > 1 ? renderMultipleTags : tags}</Tag> */}
-                  <Text is="h3" fontSize={[3,5]} m={0} pb={1}>
-                    <Link to={node.fields.slug}>{title}</Link>
+                  <Text as="h3" fontSize={[3,5]} m={0} pb={1}>
+                    <Link to={`/books/${node.fields.slug}`}>{title}</Link>
                   </Text>
-                  <Text is="p" color="grayDark" m={0} pb={3} fontSize={1}>
-                    Written by: {authors.length > 1 ? renderMultipleAuthors : authors}
+                  <Text as="p" color="grayDark" m={0} pb={3} fontSize={1}>
+                    Written by: {authors.length > 1 ? renderMultipleAuthors.join(", ") : authors}
                   </Text>
-                  <Text is="p" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                  <Text as="p" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
                 </Box>
               )
             })}
-          </Wrapper>
-        </Section>
+          </div>
+        </Box>
       </Layout>
     )
   }
@@ -59,7 +57,7 @@ export const bookQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: {regex : "\/books/"} },
+      filter: { fields: { sourceName: { eq: "books" } } }
 
     ) {
       edges {

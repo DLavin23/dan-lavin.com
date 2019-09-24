@@ -2,8 +2,7 @@
 path: "/the-coddling-of-the-american-mind"
 title: "The Coddling Of The American Mind: How Good Intentions and Bad Ideas Are Setting Up a Generation For Failure"
 authors: ["Greg Lukianoff","Jonathan Haidt"]
-rating: 0
-postType: "review"
+rating: 8
 externalLink: "https://www.amazon.com/Coddling-American-Mind-Intentions-Generation/dp/0735224897"
 tags: ["non-fiction"]
 ---

@@ -3,10 +3,6 @@ module.exports = {
     title: 'Dan Lavin',
     navLinks: [
       {
-        name: 'home',
-        link: '/',
-      },
-      {
         name: 'about',
         link: '/about',
       },
@@ -40,6 +36,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/journal`,
         name: 'journal',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/work`,
+        name: 'work',
       },
     },
     {
@@ -79,8 +82,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'dan-lavin.com',
+        short_name: 'danlavin',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
@@ -88,12 +91,13 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-theme-ui',
     'gatsby-remark-copy-linked-files',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-styled-components',
+    'gatsby-remark-source-name',
   ],
 }
