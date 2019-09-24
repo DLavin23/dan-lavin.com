@@ -23,7 +23,8 @@ class BookIndex extends React.Component {
               const authors = node.frontmatter.authors
               // const tags = node.frontmatter.tags
               // const renderMultipleTags = tags.map(tag => `${tag}, `)
-              const renderMultipleAuthors = authors.map(author => `${author}, `)
+              // const renderMultipleAuthors = authors.length > 1 ? authors.join() : authors
+              const renderMultipleAuthors = authors.map(author => author)
 
               return (
                 <Box width={['100%', '600px']} pb={4} key={node.fields.slug}>
@@ -32,7 +33,7 @@ class BookIndex extends React.Component {
                     <Link to={`/books/${node.fields.slug}`}>{title}</Link>
                   </Text>
                   <Text as="p" color="grayDark" m={0} pb={3} fontSize={1}>
-                    Written by: {authors.length > 1 ? renderMultipleAuthors : authors}
+                    Written by: {authors.length > 1 ? renderMultipleAuthors.join(", ") : authors}
                   </Text>
                   <Text as="p" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
                 </Box>

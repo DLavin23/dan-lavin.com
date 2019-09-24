@@ -9,6 +9,7 @@ export default {
     secondary: '#63B3ED',
     text: '#4A5568',
     white: '#fff',
+    hr: '#E2E8F0',
     gray100: '#F7FAFC',
     gray200: '#EDF2F7',
     gray300: '#E2E8F0',
@@ -23,12 +24,13 @@ export default {
         text: '#F7FAFC',
         background: '#4A5568',
         primary: '#667EEA',
+        hr: '#718096'
       }
     },
   },
   fonts: {
-    body: 'system-ui, sans-serif',
-    heading: 'Open Sans, sans-serif',
+    body: 'Open Sans, system-ui, sans-serif',
+    heading: 'Open Sans, system-ui, sans-serif',
     monospace: 'Menlo, monospace',
   },
   fontSizes: [
@@ -52,6 +54,16 @@ export default {
   space: [
     0, 4, 8, 16, 32, 64, 128, 256, 512
   ],
+  shadows: {
+    base: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+    medium: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+    large: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+    xlarge: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+    xxlarge: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+    inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+    outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
+    none: 'none'
+  },
   styles: {
     a: {
       color: 'primary',

@@ -14,27 +14,23 @@ class JournalTemplate extends React.Component {
         location={this.props.location}
         title={siteTitle}
       >
-        <Box py={[4,5]}>
-          <div
-            maxWidth="700px"
-          >
-            <Box py={4}>
-              <Text
-                as="h1"
-                fontSize={[7,8,9]}
-              >
-              {post.frontmatter.title}
-            </Text>
+        <Box maxWidth="680px" mx="auto">
+          <Box py={4}>
             <Text
-              as="p"
-              fontSize={[3,4]}
+              as="h1"
+              fontSize={[7,8,9]}
             >
-              Written {post.frontmatter.date}
-            </Text>
-            </Box>
+            {post.frontmatter.title}
+          </Text>
+          <Text
+            as="p"
+            fontSize={[3,4]}
+          >
+            Written {post.frontmatter.date}
+          </Text>
+          </Box>
 
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          </div>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </Box>
       </Layout>
     )

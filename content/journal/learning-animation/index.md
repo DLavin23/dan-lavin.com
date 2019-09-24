@@ -2,6 +2,7 @@
 path: "/learning-animation"
 date: "2018-10-16"
 title: "Learning Animation With Bob Ross"
+featured: true
 tags: ["programming"]
 ---
 

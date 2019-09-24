@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { Box, Flex, Text } from 'rebass'
 import { GitHub, Linkedin, Codepen, Twitter, Instagram } from 'react-feather'
 
@@ -40,9 +39,9 @@ const renderContactLinks = () => {
         alignItems='center'
         justifyContent='center'
         display='flex'
-        m={2}
+        p={2}
       >
-        <Link
+        <a
           href={link.location}
           title={link.title}
         >
@@ -54,7 +53,7 @@ const renderContactLinks = () => {
           >
             {link.icon}
           </Text>
-        </Link>
+        </a>
       </Box>
     )
   })
@@ -64,6 +63,7 @@ const ContactLinks = () => {
   return (
     <Flex
       as='ul'
+      mx={-2}
       sx={{
         listStyle: 'none'
       }}
