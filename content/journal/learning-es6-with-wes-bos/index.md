@@ -172,3 +172,11 @@ const familyMember = {
   create(){},
 }
 ```
+
+# Sets and WeakSets
+
+- A set is like a unique array, where you can only add the same item once. It's different from a regular old array in that you can't access the items individuall and it's not indexed based.
+
+- A weak set can only contain an object (no strings, arrays, or numbers, etc.) and you can't loop over a weak set. There's no iterator function.
+
+- One of the benefits of a weak set is that they clean themselves up, which is useful for garbage collection and memory leaks.

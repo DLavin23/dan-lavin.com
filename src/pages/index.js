@@ -56,7 +56,7 @@ class HomeIndex extends React.Component {
         title={siteTitle}
         desc={description}
       >
-        <Box py={[4]} width={['100%','85%', '65%']}>
+        <Box py={[4,5]} width={['100%','85%', '65%']}>
           <Heading
             as="h4"
             fontSize={[3,4,5]}

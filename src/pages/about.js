@@ -11,7 +11,8 @@ const About = () => (
           as="h2"
           fontSize={6}
           fontWeight="800"
-          mb={3}
+          m={0}
+          pb={3}
         >
           Hi, I'm Dan!
         </Heading>

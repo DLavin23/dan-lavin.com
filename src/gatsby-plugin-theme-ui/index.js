@@ -8,8 +8,9 @@ export default {
     accent: '#2D3748',
     background: '#F7FAFC',
     muted: '#A0AEC0',
-    primary: '#319795',
-    secondary: '#63B3ED',
+    primary: '#5A67D8',
+    secondary: '#667EEA',
+    linkAccent: '#EBF4FF',
     text: '#4A5568',
     white: '#fff',
     hr: '#E2E8F0',
@@ -69,9 +70,14 @@ export default {
   },
   styles: {
     a: {
+      borderBottom: '2px solid',
+      borderColor: 'linkAccent',
       color: 'primary',
       fontFamily: 'body',
+      fontWeight: '600',
+      textDecoration: 'none',
       ':hover,:focus': {
+        bg: 'linkAccent',
         color: 'secondary',
       }
     },

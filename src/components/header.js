@@ -22,7 +22,7 @@ const Header = ({ siteTitle, navLinks }) => {
   `;
 
   return (
-    <Box as="header">
+    <Box as="header" fontFamily='body'>
       <Container>
         <Flex
           alignItems="center"
@@ -71,6 +71,7 @@ const Header = ({ siteTitle, navLinks }) => {
                       activeStyle={{
                         boxShadow: `inset 0 -2px 0 ${context.theme.colors.primary}`,
                         color: `${context.theme.colors.primary}`,
+                        fontWeight: '600',
                       }}
                     >
                       {link.name}
