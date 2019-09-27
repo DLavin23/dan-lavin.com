@@ -1,6 +1,9 @@
 export default {
   initialColorMode: 'light',
   useCustomProperties: false,
+  breakpoints: [
+    '600px', '900px', '1100px',
+  ],
   colors: {
     accent: '#2D3748',
     background: '#F7FAFC',
@@ -67,10 +70,9 @@ export default {
   styles: {
     a: {
       color: 'primary',
-      fontSize: 16,
       fontFamily: 'body',
-      '&:hover': {
-        color: 'primary',
+      ':hover,:focus': {
+        color: 'secondary',
       }
     },
   }

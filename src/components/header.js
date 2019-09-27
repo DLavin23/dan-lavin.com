@@ -1,12 +1,26 @@
 import React from 'react'
-import { useColorMode } from 'theme-ui'
+import styled from '@emotion/styled'
+import { useColorMode, useThemeUI } from 'theme-ui'
 import { Link } from 'gatsby'
 import { Box, Flex, Text } from 'rebass'
-import { Moon, Sun } from 'react-feather'
+import { Home, Moon, Sun } from 'react-feather'
 import { Container } from '.'
 
 const Header = ({ siteTitle, navLinks }) => {
   const [colorMode, setColorMode] = useColorMode()
+  const context = useThemeUI()
+
+  const StyledLink = styled(props => <Link {...props} />)`
+    color: ${context.theme.colors.text};
+    display: inline-flex;
+    padding-bottom: ${context.theme.space[2]}px;
+    padding-top: ${context.theme.space[2]}px;
+    text-decoration: none;
+    &:hover {
+      color: ${context.theme.colors.primary};
+    }
+  `;
+
   return (
     <Box as="header">
       <Container>
@@ -19,13 +33,20 @@ const Header = ({ siteTitle, navLinks }) => {
             as="h1"
             fontWeight='bold'
             fontSize={4}
+            sx={{alignItems: 'center', display: 'flex'}}
           >
-            <Link
+            <StyledLink
               to="/"
-              style={{textDecoration: 'none'}}
             >
-              <Text as="span" color="text" fontSize={5}>{siteTitle}</Text>
-            </Link>
+              <Flex
+                alignItems="center"
+                justifyContent="center"
+              >
+                <Home size={18} color={context.theme.colors.muted}/>
+                <Box as="span" px={2}>{siteTitle}</Box>
+              </Flex>
+
+            </StyledLink>
           </Text>
 
           <Box as="nav">
@@ -42,32 +63,25 @@ const Header = ({ siteTitle, navLinks }) => {
                   <Box
                     as="li"
                     key={link.name}
+                    fontSize={3}
                     px={2}
                   >
-                    <Link
+                    <StyledLink
                       to={link.link}
-                      activeClassName='active-link'
-                      style={{textDecoration: 'none'}}
+                      activeStyle={{
+                        boxShadow: `inset 0 -2px 0 ${context.theme.colors.primary}`,
+                        color: `${context.theme.colors.primary}`,
+                      }}
                     >
-                      <Text as="span" color="text">{link.name}</Text>
-                    </Link>
-                    {/* <Link
-                      to={link.link}
-                      activeClassName='active'
-                      sx={{
-                        color: 'inherit',
-                        '&.active': {
-                          color: 'primary',
-                        }
-                      }}>
                       {link.name}
-                    </Link> */}
+                    </StyledLink>
                   </Box>
                 )
               }
               <Text
                 as="li"
                 display="inline-flex"
+                fontSize={3}
                 px={2}
                 sx={{cursor: 'pointer'}}
                 onClick={e => {
