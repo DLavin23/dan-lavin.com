@@ -1,14 +1,16 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
-import { Box, Text } from 'rebass'
-import { Layout } from '../components'
+import { graphql } from 'gatsby'
+import { Box } from 'rebass'
+import { Layout, PostPreview } from '../components'
 
 class JournalIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const description = data.site.siteMetadata.description
-    const posts = data.allMarkdownRemark.edges
+    const journalEntries = data.allMarkdownRemark.edges
+      .filter(edge => !!edge.node.frontmatter.date)
+      .map(edge => <PostPreview key={edge.node.fields.slug} post={edge.node} prefix='journal' />)
 
     return (
       <Layout
@@ -16,29 +18,8 @@ class JournalIndex extends React.Component {
         title={siteTitle}
         desc={description}
       >
-        <Box py={[4,5]}>
-          <div>
-            {posts.map(({ node }) => {
-              const title = node.frontmatter.title || node.fields.slug
-              return (
-                <Box width={['100%', '600px']}  pb={4} key={node.fields.slug}>
-                  <Link
-                    to={`/journal/${node.fields.slug}`}
-                    color="gray700"
-                    fontSize={[4,5]}
-                    fontWeight="800"
-                  >
-                    {title}
-                  </Link>
-                  <Text
-                    as="p"
-                    color="gray600"
-                    dangerouslySetInnerHTML={{ __html: node.excerpt }}
-                  />
-                </Box>
-              )
-            })}
-          </div>
+        <Box py={[4,5]} width={['100%', '600px']}>
+          {journalEntries}
         </Box>
       </Layout>
     )

@@ -14,7 +14,7 @@ class JournalTemplate extends React.Component {
         location={this.props.location}
         title={siteTitle}
       >
-        <Box maxWidth="680px" mx="auto">
+        <Box py={[4,5]} maxWidth="680px" mx="auto">
           <Box py={4}>
             <Text
               as="h1"

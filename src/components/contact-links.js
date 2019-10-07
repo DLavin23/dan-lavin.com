@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, Text } from 'rebass'
+import { Box, Flex } from 'rebass'
 import { GitHub, Linkedin, Codepen, Twitter, Instagram } from 'react-feather'
 
 const renderContactLinks = () => {
@@ -39,20 +39,26 @@ const renderContactLinks = () => {
         alignItems='center'
         justifyContent='center'
         display='flex'
-        p={2}
+        p={1}
       >
         <a
           href={link.location}
           title={link.title}
         >
-          <Text
+          <Flex
             color='muted'
             sx={{
-              '&:hover, &:focus': { color: 'gray800' },
+              borderRadius: 4,
+              p: 1,
+              '&:hover, &:focus': {
+                bg: 'rgba(255,255,255,0.05)',
+                boxShadow: 'base',
+                color: 'text'
+              },
             }}
           >
             {link.icon}
-          </Text>
+          </Flex>
         </a>
       </Box>
     )

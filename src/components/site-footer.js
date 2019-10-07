@@ -1,15 +1,15 @@
 import React from 'react'
-import { Box, Flex } from 'rebass'
-import Container from './container'
-import ContactLinks from '../components/contact-links'
+import { Container, Footer } from 'theme-ui'
+import { Flex } from 'rebass'
+import { ContactLinks } from '.'
 
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 function HumanReadableDay() {
   return days[new Date().getDay()]
 }
 
-const Footer = () => (
-  <Box as="footer">
+const SiteFooter = () => (
+  <Footer>
     <Container>
       <Flex
         alignItems={['flex-start', 'center']}
@@ -23,7 +23,7 @@ const Footer = () => (
         <ContactLinks />
       </Flex>
     </Container>
-  </Box>
+  </Footer>
 )
 
-export default Footer
+export default SiteFooter
