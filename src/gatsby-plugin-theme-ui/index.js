@@ -1,5 +1,6 @@
 export default {
   initialColorMode: 'light',
+  useColorSchemeMediaQuery: true,
   useCustomProperties: false,
   breakpoints: [
     '600px', '900px', '1100px',

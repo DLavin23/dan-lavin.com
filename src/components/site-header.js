@@ -162,10 +162,10 @@ const SiteHeader = ({ siteTitle, navLinks }) => {
                   }
                 }}
                 onClick={e => {
-                  setColorMode(colorMode === 'default' ? 'dark' : 'default')
+                  setColorMode(colorMode === 'light' ? 'dark' : 'light')
                 }}
               >
-                { colorMode === 'default' ? <Moon size={16} color='#4A5568' fill='#CBD5E0' /> : <Sun size={16} color='#F6E05E' fill='#F6E05E' /> }
+                { colorMode === 'light' ? <Moon size={16} color='#4A5568' fill='#CBD5E0' /> : <Sun size={16} color='#F6E05E' fill='#F6E05E' /> }
               </Box>
             </NavList>
           </Nav>
