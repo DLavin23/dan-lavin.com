@@ -88,6 +88,7 @@ const NavList = styled('div')(
     display: props.isMenuOpen ? 'block' : 'flex',
     justifyContent: 'space-between',
     listStyleType: 'none',
+    margin: 0,
     top: props.isMenuOpen ? '50%' : 'initial',
   })
 )

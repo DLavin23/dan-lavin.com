@@ -88,7 +88,7 @@ export default {
     },
     Container: {
       maxWidth: 1024,
-      px: 3,
+      px: [3,4,5],
       py: 0,
     },
     Header: {
