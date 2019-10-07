@@ -7,11 +7,13 @@ export default {
   colors: {
     accent: '#2D3748',
     background: '#F7FAFC',
+    heading: '#4A5568',
+    offset: '#fff',
     muted: '#A0AEC0',
     primary: '#5A67D8',
     secondary: '#667EEA',
-    linkAccent: '#EBF4FF',
-    text: '#4A5568',
+    linkAccent: '#E9D8FD',
+    text: '#2D3748',
     white: '#fff',
     hr: '#E2E8F0',
     gray100: '#F7FAFC',
@@ -25,8 +27,11 @@ export default {
     gray900: '#1A202C',
     modes: {
       dark: {
-        text: '#F7FAFC',
-        background: '#4A5568',
+        accent: '#A0AEC0',
+        heading: '#CBD5E0',
+        text: '#E2E8F0',
+        background: '#1A202C',
+        offset: '#4A5568',
         primary: '#667EEA',
         hr: '#718096'
       }
@@ -52,7 +57,7 @@ export default {
     }
   },
   lineHeights: {
-    body: 1.5,
+    body: 1.75,
     heading: 1.125,
   },
   space: [
@@ -80,6 +85,23 @@ export default {
         bg: 'linkAccent',
         color: 'secondary',
       }
+    },
+    Container: {
+      maxWidth: 1024,
+      px: 3,
+      py: 0,
+    },
+    Header: {
+      display: 'block',
+      fontFamily: 'body'
+    },
+    Footer: {
+      display: 'block',
+      fontFamily: 'body'
+    },
+    root: {
+      fontFamily: 'body',
+      lineHeight: 'body',
     },
   }
 }

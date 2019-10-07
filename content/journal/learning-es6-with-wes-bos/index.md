@@ -180,3 +180,12 @@ const familyMember = {
 - A weak set can only contain an object (no strings, arrays, or numbers, etc.) and you can't loop over a weak set. There's no iterator function.
 
 - One of the benefits of a weak set is that they clean themselves up, which is useful for garbage collection and memory leaks.
+
+# Async + Await
+
+- any function that returns a promise, has a promise based API and can be used interchangably with either `then` + `then` + `catch` or `async` + `await`
+- the asynchronous nature of JS can make things difficult if you want flow control over your requests and responses. That's where `async` + `await` is useful.
+- `async` + `await` are built on top of promisies. You must have a function built on a promise in order to use `async` + `await`.
+- you can only use `await` within an `async` function
+- a higher order function is a function that takes in a function as an argument and returns a new function
+- if you have a multiple promises, you can use `Promise.all()` and then pass in an array of promises.

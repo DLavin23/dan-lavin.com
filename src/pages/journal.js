@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Box } from 'rebass'
-import { Layout, PreviewLink } from '../components'
+import { Layout, PostPreview } from '../components'
 
 class JournalIndex extends React.Component {
   render() {
@@ -10,9 +10,7 @@ class JournalIndex extends React.Component {
     const description = data.site.siteMetadata.description
     const journalEntries = data.allMarkdownRemark.edges
       .filter(edge => !!edge.node.frontmatter.date)
-      .map(edge => <PreviewLink key={edge.node.fields.slug} post={edge.node} prefix='journal' />)
-
-    console.log(data.allMarkdownRemark.edges)
+      .map(edge => <PostPreview key={edge.node.fields.slug} post={edge.node} prefix='journal' />)
 
     return (
       <Layout

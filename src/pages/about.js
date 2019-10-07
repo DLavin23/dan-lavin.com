@@ -5,7 +5,7 @@ import { Layout } from '../components'
 
 const About = () => (
   <Layout>
-    <Box py={[4,5]} width={['100%','60%']}>
+    <Box py={[4,5]} width={['100%','70%']}>
       <Box>
         <Heading
           as="h2"
@@ -16,7 +16,7 @@ const About = () => (
         >
           Hi, I'm Dan!
         </Heading>
-        <Text fontSize={[3,4]} mb={3} pr={3}>
+        <Text fontSize={[3,4]} mb={3} pr={3} fontFamily="body">
           I love products that solve real problems, for real people. I enjoy design that is both simple and intuitive. I believe that talking to actual customers is the best way to make sure you're building the right product. I embrace change. Failure happens from time to time. That's OK, as long as you learn from your mistakes. I value strong communication. It's impossible to build a great product if design, engineering, and the business are not working together as one team. Finally, I approach every problem with an "empty cup" and a "beginners mind".
         </Text>
       </Box>

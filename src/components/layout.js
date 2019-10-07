@@ -1,9 +1,10 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import { Container, Main } from 'theme-ui'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import './layout.css'
-import { Container, Header, Footer } from '.'
+import { SiteHeader, SiteFooter } from '.'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -31,14 +32,16 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header
+        <SiteHeader
           navLinks={data.site.siteMetadata.navLinks}
           siteTitle={data.site.siteMetadata.title}
         />
-        <Container>
-          {children}
-        </Container>
-        <Footer />
+        <Main>
+          <Container>
+            {children}
+          </Container>
+        </Main>
+        <SiteFooter />
       </>
     )}
   />

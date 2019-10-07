@@ -3,14 +3,17 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { jsx, Styled } from 'theme-ui'
 import { Box, Button, Heading, Text } from 'rebass'
-import { ContactLinks, Layout } from '../components'
+import { ContactLinks, Layout, PostPreview } from '../components'
 
 class HomeIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const description = data.site.siteMetadata.description
-    const posts = data.allMarkdownRemark.edges
+    const featuredJournalEntries = data.allMarkdownRemark.edges
+      .filter(edge => !!edge.node.frontmatter.date)
+      .map(edge => <PostPreview key={edge.node.fields.slug} post={edge.node} prefix='journal' />)
+
     // move to seperate file
     const currentDate = new Date()
     const currentHour = currentDate.getHours()
@@ -68,6 +71,7 @@ class HomeIndex extends React.Component {
           </Heading>
           <Heading
             as="h2"
+            color="heading"
             fontSize={[6,7,7]}
             fontWeight="800"
             lineHeight="1.25"
@@ -82,32 +86,14 @@ class HomeIndex extends React.Component {
           <ContactLinks />
         </Box>
 
-        <Box py={[4]}>
+        <Box py={4} width={['100%','85%', '65%']}>
           <Heading fontSize={[5,6]} mb={3}>
-            Writing
+            Featured Writing
           </Heading>
           <Box as="hr" my={4} bg="hr" height="5px" width="40px"/>
 
           <Box fontFamily="Open Sans">
-            {posts.map(({ node }) => {
-              const title = node.frontmatter.title || node.fields.slug
-              return (
-                <Box width={['100%', '600px']}  pb={4} key={node.fields.slug}>
-                  <Link
-                    to={`/journal/${node.fields.slug}`}
-                    style={{textDecoration: 'none'}}
-                  >
-                    <Text as="span" color="accent" fontWeight="bold">{title}</Text>
-                  </Link>
-                  <Text
-                    as="p"
-                    color="text"
-                    fontSize={3}
-                    dangerouslySetInnerHTML={{ __html: node.excerpt }}
-                  />
-                </Box>
-              )
-            })}
+            {featuredJournalEntries}
           </Box>
 
           <Link to="/journal">

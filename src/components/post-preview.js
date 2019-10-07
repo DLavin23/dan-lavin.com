@@ -1,26 +1,29 @@
-import React from 'react'
-import styled from '@emotion/styled'
-import { useThemeUI } from 'theme-ui'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import { Link } from 'gatsby'
 import { Box, Text } from 'rebass'
 
-const PreviewLink = ({ post, prefix }) => {
-  const context = useThemeUI()
+const PostLink = ({ color, fontSize, ...props }) => (
+  <Link
+    {...props}
+    sx={{
+      color: 'accent',
+      fontWeight: 'bold',
+      fontSize: [4,5,6],
+      textDecoration: 'none',
+      '&:hover': {
+        color: 'primary'
+      }
+    }}
+  />
+)
 
-  const PostLink = styled(props => <Link {...props} />)`
-    color: ${context.theme.colors.accent};
-    font-size: ${context.theme.fontSizes[4]}px;
-    font-weight: bold;
-    text-decoration: none;
-    &:hover {
-      color: ${context.theme.colors.primary};
-    }
-  `;
-
+const PostPreview = ({ post, prefix }) => {
   return (
-    <Box pb={4}>
+    <Box pb={5}>
       <Text
         as='h3'
+        fontFamily='heading'
         mb={2}
       >
         <PostLink to={`/${prefix}/${post.fields.slug}`}>
@@ -28,7 +31,7 @@ const PreviewLink = ({ post, prefix }) => {
         </PostLink>
       </Text>
       <Text
-        fontSize={3}
+        fontSize={[2]}
         color='muted'
         mb={2}
       >
@@ -37,7 +40,8 @@ const PreviewLink = ({ post, prefix }) => {
       <Text
         as='p'
         color='text'
-        fontSize={3}
+        fontSize={[2,3]}
+        fontFamily='body'
         dangerouslySetInnerHTML={{ __html: post.excerpt }}
       />
     </Box>
@@ -45,4 +49,4 @@ const PreviewLink = ({ post, prefix }) => {
 }
 
 
-export default PreviewLink
+export default PostPreview
