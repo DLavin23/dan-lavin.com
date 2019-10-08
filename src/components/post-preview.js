@@ -7,7 +7,7 @@ const PostLink = ({ color, fontSize, ...props }) => (
   <Link
     {...props}
     sx={{
-      color: 'accent',
+      color: 'heading',
       fontWeight: 'bold',
       fontSize: [4,5,6],
       textDecoration: 'none',

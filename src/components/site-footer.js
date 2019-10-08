@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Footer } from 'theme-ui'
-import { Flex } from 'rebass'
+import { Box, Flex } from 'rebass'
 import { ContactLinks } from '.'
 
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
@@ -15,11 +15,16 @@ const SiteFooter = () => (
         alignItems={['flex-start', 'center']}
         flexDirection={['column', 'row']}
         justifyContent="space-between"
+        mt={4}
         py={3}
+        sx={{
+          borderTop: '2px solid',
+          borderColor: 'hr'
+        }}
       >
-        <div>
+        <Box>
           &copy;{new Date().getFullYear()} Happy {HumanReadableDay()}!
-        </div>
+        </Box>
         <ContactLinks />
       </Flex>
     </Container>

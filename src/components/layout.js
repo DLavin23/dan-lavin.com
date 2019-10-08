@@ -36,11 +36,13 @@ const Layout = ({ children }) => (
           navLinks={data.site.siteMetadata.navLinks}
           siteTitle={data.site.siteMetadata.title}
         />
+
         <Main>
           <Container>
             {children}
           </Container>
         </Main>
+
         <SiteFooter />
       </>
     )}

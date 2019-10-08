@@ -62,6 +62,7 @@ class HomeIndex extends React.Component {
         <Box py={[4,5]} width={['100%','85%', '65%']}>
           <Heading
             as="h4"
+            color='accent'
             fontSize={[3,4,5]}
             fontWeight="400"
             lineHeight="1.25"
@@ -87,12 +88,12 @@ class HomeIndex extends React.Component {
         </Box>
 
         <Box py={4} width={['100%','85%', '65%']}>
-          <Heading fontSize={[5,6]} mb={3}>
+          <Heading color='heading' fontSize={[5,6]} mb={3}>
             Featured Writing
           </Heading>
-          <Box as="hr" my={4} bg="hr" height="5px" width="40px"/>
+          <Box as="hr" my={3} bg="hr" height="4px" width="40px"/>
 
-          <Box fontFamily="Open Sans">
+          <Box py={3} ontFamily="Open Sans">
             {featuredJournalEntries}
           </Box>
 

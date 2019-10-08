@@ -1,8 +1,10 @@
 import React from 'react'
+import { useColorMode } from 'theme-ui'
 import { Box, Flex } from 'rebass'
 import { GitHub, Linkedin, Codepen, Twitter, Instagram } from 'react-feather'
 
 const renderContactLinks = () => {
+  const [colorMode] = useColorMode()
   const socialLinks = [
     {
       title: 'Github',
@@ -49,9 +51,9 @@ const renderContactLinks = () => {
             color='muted'
             sx={{
               borderRadius: 4,
-              p: 1,
+              p: 2,
               '&:hover, &:focus': {
-                bg: 'rgba(255,255,255,0.05)',
+                bg: colorMode === 'light' ? 'white' : '#4A5568',
                 boxShadow: 'base',
                 color: 'text'
               },

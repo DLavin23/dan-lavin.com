@@ -1,10 +1,9 @@
 /** @jsx jsx */
 import { useState } from 'react'
-import styled from '@emotion/styled'
 import { Container, Header, jsx, useColorMode } from 'theme-ui'
 import { Link } from 'gatsby'
 import { Box, Flex, Text } from 'rebass'
-import { Home, Menu, Moon, Sun, X} from 'react-feather'
+import { Menu, Moon, Sun, X} from 'react-feather'
 
 const NavLink = ({ ...props }) => (
   <Link
@@ -41,7 +40,7 @@ const LogoLink = ({ ...props }) => (
     {...props}
     sx={{
       alignItems: 'center',
-      color: 'text',
+      color: 'accent',
       display: 'flex',
       textDecoration: 'none',
       '&:hover': {
@@ -50,16 +49,6 @@ const LogoLink = ({ ...props }) => (
     }}
   >
   </Link>
-)
-
-const LogoIcon = ({...props}) => (
-  <Home
-    {...props}
-    sx={{
-      color: 'muted'
-    }}
-  />
-
 )
 
 const Nav = ({ ...props }) => (
@@ -82,15 +71,20 @@ const Nav = ({ ...props }) => (
   </Flex>
 )
 
-const NavList = styled('div')(
-  props => ({
-    alignItems: 'center',
-    display: props.isMenuOpen ? 'block' : 'flex',
-    justifyContent: 'space-between',
-    listStyleType: 'none',
-    margin: 0,
-    top: props.isMenuOpen ? '50%' : 'initial',
-  })
+const NavList = ({ ...props }) => (
+  <Box
+    {...props}
+    sx={{
+      alignItems: 'center',
+      display: props.isMenuOpen ? 'block' : 'flex',
+      justifyContent: 'space-between',
+      listStyleType: 'none',
+      m: 0,
+      pl: props.isMenuOpen ? 4 : 'inital',
+      top: props.isMenuOpen ? '50%' : 'initial',
+    }}
+  >
+  </Box>
 )
 
 const SiteHeader = ({ siteTitle, navLinks }) => {
@@ -107,16 +101,11 @@ const SiteHeader = ({ siteTitle, navLinks }) => {
         >
           <Text
             as='h1'
-            fontWeight='bold'
+            fontWeight='700'
             fontSize={4}
             sx={{alignItems: 'center', display: 'flex'}}
           >
-            <LogoLink
-              to='/'
-            >
-              <LogoIcon size={18} />
-              <Box as='span' px={2}>{siteTitle}</Box>
-            </LogoLink>
+            <LogoLink to='/'>{siteTitle}</LogoLink>
           </Text>
 
           <Nav
@@ -148,24 +137,38 @@ const SiteHeader = ({ siteTitle, navLinks }) => {
               }
               <Box
                 as='li'
-                bg='offset'
-                display={'inline-flex'}
-                fontSize={3}
-                p={2}
-                ml={2}
-                sx={{
-                  borderRadius: '4px',
-                  boxShadow: 'base',
-                  cursor: 'pointer',
-                  '&:hover': {
-                    boxShadow: 'large'
-                  }
-                }}
-                onClick={e => {
-                  setColorMode(colorMode === 'light' ? 'dark' : 'light')
-                }}
+                alignItems='center'
+                display='flex'
+                pt={[3,0]}
+                px={2}
               >
-                { colorMode === 'light' ? <Moon size={16} color='#4A5568' fill='#CBD5E0' /> : <Sun size={16} color='#F6E05E' fill='#F6E05E' /> }
+                <Box
+                  display={['flex', 'none']}
+                  fontSize={3}
+                  pr={3}
+                >
+                  { colorMode === 'light' ? 'Light Mode' : 'Dark Mode'}
+                </Box>
+                <Box
+                  bg='offset'
+                  display={'inline-flex'}
+                  fontSize={3}
+                  p={2}
+                  ml={[0,2]}
+                  sx={{
+                    borderRadius: '4px',
+                    boxShadow: 'base',
+                    cursor: 'pointer',
+                    '&:hover': {
+                      boxShadow: 'large'
+                    }
+                  }}
+                  onClick={e => {
+                    setColorMode(colorMode === 'light' ? 'dark' : 'light')
+                  }}
+                >
+                  { colorMode === 'light' ? <Moon size={16} color='#4A5568' fill='#CBD5E0' /> : <Sun size={16} color='#F6E05E' fill='#F6E05E' /> }
+                </Box>
               </Box>
             </NavList>
           </Nav>
@@ -173,7 +176,7 @@ const SiteHeader = ({ siteTitle, navLinks }) => {
           <Box
             as='button'
             alignItems='center'
-            bg='transparent'
+            bg='offset'
             color='text'
             display={['inline-flex', 'none']}
             fontSize={2}
