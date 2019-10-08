@@ -102,6 +102,7 @@ class HomeIndex extends React.Component {
               bg="primary"
               fontSize={2}
               fontWeight="bold"
+              mb={5}
               sx={{cursor: 'pointer', boxShadow: 'large'}}
             >
               View All
