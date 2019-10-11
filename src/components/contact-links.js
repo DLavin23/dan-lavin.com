@@ -1,10 +1,11 @@
 import React from 'react'
-import { useColorMode } from 'theme-ui'
 import { Box, Flex } from 'rebass'
+import { useThemeUI } from 'theme-ui'
 import { GitHub, Linkedin, Codepen, Twitter, Instagram } from 'react-feather'
 
-const renderContactLinks = () => {
-  const [colorMode] = useColorMode()
+const ContactLinks = () => {
+  const context = useThemeUI()
+  const { colorMode } = context
   const socialLinks = [
     {
       title: 'Github',
@@ -33,41 +34,40 @@ const renderContactLinks = () => {
     },
   ]
 
-  return socialLinks.map(link => {
-    return (
-      <Box
-        as='li'
-        key={link.title}
-        alignItems='center'
-        justifyContent='center'
-        display='flex'
-        p={1}
-      >
-        <a
-          href={link.location}
-          title={link.title}
+  const renderContactLinks =
+    socialLinks.map(link => {
+      return (
+        <Box
+          as='li'
+          key={link.title}
+          alignItems='center'
+          justifyContent='center'
+          display='flex'
+          p={1}
         >
+          <a
+            href={link.location}
+            title={link.title}
+          >
           <Flex
             color='muted'
             sx={{
               borderRadius: 4,
               p: 2,
               '&:hover, &:focus': {
-                bg: colorMode === 'light' ? 'white' : '#4A5568',
+                bg: colorMode === 'light' ? 'rgba(255,255,255,1)' : 'gray700',
                 boxShadow: 'base',
                 color: 'text'
               },
             }}
-          >
+            >
             {link.icon}
           </Flex>
-        </a>
-      </Box>
-    )
-  })
-}
+          </a>
+        </Box>
+      )
+    })
 
-const ContactLinks = () => {
   return (
     <Flex
       as='ul'
@@ -76,7 +76,7 @@ const ContactLinks = () => {
         listStyle: 'none'
       }}
     >
-      {renderContactLinks()}
+      {renderContactLinks}
     </Flex>
   )
 }
