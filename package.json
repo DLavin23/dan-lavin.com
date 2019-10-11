@@ -9,7 +9,7 @@
     "@rebass/components": "^4.0.0-1",
     "@theme-ui/prism": "^0.2.29",
     "@theme-ui/typography": "^0.2.29",
-    "gatsby": "^2.13.61",
+    "gatsby": "^2.15.35",
     "gatsby-cli": "^2.7.30",
     "gatsby-image": "^2.2.8",
     "gatsby-plugin-catch-links": "^2.1.2",
