@@ -1,0 +1,5 @@
+export { default as Boom } from './boom.wav'
+export { default as Clap } from './clap.wav'
+export { default as HiHat } from './hihat.wav'
+export { default as Kick } from './kick.wav'
+export { default as OpenHat } from './openhat'

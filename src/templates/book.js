@@ -14,7 +14,7 @@ class BookTemplate extends React.Component {
         title={siteTitle}
       >
         <Box py={[4,5]}>
-          <div
+          <Box
             maxWidth="700px"
           >
             <Box py={4}>
@@ -27,7 +27,7 @@ class BookTemplate extends React.Component {
             </Box>
 
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          </div>
+          </Box>
         </Box>
       </Layout>
     )
