@@ -21,7 +21,9 @@ class ProjectIndex extends React.Component {
             <li>
               <Link to='/projects/drumkit'>Drum Kit</Link>
             </li>
-            <li>Games!</li>
+            <li>
+              <Link to='/projects/clock'>Clock</Link>
+            </li>
           </ul>
         </Box>
       </Layout>
