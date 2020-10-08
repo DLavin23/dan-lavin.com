@@ -8,7 +8,7 @@ tags: ["non-fiction"]
 ---
 
 # Summary
-This book is great.
+This book is great, one of the best I've ever read when it comes to product development!
 
 ## Principles of Shaping
 - Shaping work needs to happen at the right level of abstraction. Wireframes are too much and words are too abstract. You need the right balance of both.
