@@ -6,3 +6,8 @@ layout: layout.njk
 <h1>hello world!!!</h1>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repellat adipisci aperiam recusandae dolorem fuga et totam perferendis libero iusto, quos cum maxime labore facilis sunt porro, ipsum sapiente odit?</p>
+
+<div data-controller="hello" class="flex items-center space-x-2">
+  <input data-hello-target="name" type="text" class="border border-gray-300">
+  <button data-action="click->hello#greet">Greet</button>
+</div>
