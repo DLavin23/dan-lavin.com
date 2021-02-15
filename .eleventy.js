@@ -6,10 +6,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({'_source/_assets/images': 'assets'});
 
   eleventyConfig.setTemplateFormats([
+    "html",
     "md",
     "liquid",
     "njk",
-    "html",
   ]);
 
   return {

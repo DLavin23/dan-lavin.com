@@ -3,11 +3,7 @@ title: Home
 layout: layout.njk
 ---
 
-<h1>hello world!!!</h1>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repellat adipisci aperiam recusandae dolorem fuga et totam perferendis libero iusto, quos cum maxime labore facilis sunt porro, ipsum sapiente odit?</p>
-
-<div data-controller="hello" class="flex items-center space-x-2">
-  <input data-hello-target="name" type="text" class="border border-gray-300">
-  <button data-action="click->hello#greet">Greet</button>
-</div>
+<header data-controller="hello" class="max-w-3xl">
+  <h1 class="text-6xl font-bold text-gray-700 pb-2">Good <span data-hello-target="output"></span>!</h1>
+  <p class="text-4xl font-normal text-gray-600">My name is Dan Lavin, and I'm a product manager, designer, and developer living in Chicago.</p>
+</header>
