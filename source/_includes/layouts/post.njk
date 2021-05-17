@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/assets/modern-normalize.css">
+    <link rel="stylesheet" type="text/css" href="/assets/main.css" />
+  </head>
+  <body class="font-sans">
+    {% include "header.html" %}
+
+    <main class="post">
+      {{ content | safe }}
+    </main>
+
+    {%- for post in collections.post -%}
+      <li{% if page.url == post.url %} aria-current="page"{% endif %}>
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      </li>
+    {%- endfor -%}
+
+    {% include "footer.html" %}
+    <script src="/assets/main.js"></script>
+  </body>
+</html>

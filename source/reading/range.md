@@ -1,6 +1,6 @@
 ---
 title: Range
-layout: layout.njk
+layout: layouts/base.njk
 ---
 
 Why specialists rule.

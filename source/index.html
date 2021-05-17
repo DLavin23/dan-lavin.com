@@ -1,0 +1,32 @@
+---
+title: Home
+layout: layouts/base.njk
+---
+
+<header>
+  <h1>Good <span data-greeting>day</span>, I'm Dan.</h1>
+  <p>I'm one of those awkward generalists that likes to dabble in code, design, and all things product.</p>
+  <p>Currently, I work with my friends at Go Between, where we help companies design and build digital products.</p>
+</header>
+
+<section>
+  <h2>Recent Writing</h2>
+  <ul>
+    {%- for post in collections.post -%}
+      <li{% if page.url == post.url %} aria-current="page"{% endif %}>
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section>
+  <h2>Featured Projects</h2>
+  <ul>
+    {%- for project in collections.project -%}
+      <li{% if page.url == project.url %} aria-current="page"{% endif %}>
+        <a href="{{ project.url | url }}">{{ project.data.title }}</a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</section>
