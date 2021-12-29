@@ -2,31 +2,44 @@
 title: Home
 layout: layouts/base.njk
 ---
+<section class="hero gutter-x gutter-y">
+  <header class="hero__header">
+    <h1 class="hero__headline">Good <span id="time-of-day" class="hero__greeting"></span></h1>
+    <p class="hero__text">Hi, my name is Dan. I'm a product manager with over <span id="experience"></span> years of experience building digital products. In that time, I've worn many hats, most of them on product teams either as a designer, developer, or product manager.</p>
+    <p class="hero__text">Basically, I'm one of those awkward generalists that loves helping teams bring successfull products to life.</p>
+    <p class="hero__text">Currently, I run a small consulting company that aims to help companies build successful products and strong product and engineering teams.</p>
+  </header>
 
-<header>
-  <h1>Good <span data-greeting>day</span>, I'm Dan.</h1>
-  <p>I'm one of those awkward generalists that likes to dabble in code, design, and all things product.</p>
-  <p>Currently, I work with my friends at Go Between, where we help companies design and build digital products.</p>
-</header>
-
-<section>
-  <h2>Recent Writing</h2>
-  <ul>
-    {%- for post in collections.post -%}
-      <li{% if page.url == post.url %} aria-current="page"{% endif %}>
-        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-      </li>
-    {%- endfor -%}
-  </ul>
-</section>
-
-<section>
-  <h2>Featured Projects</h2>
-  <ul>
-    {%- for project in collections.project -%}
-      <li{% if page.url == project.url %} aria-current="page"{% endif %}>
-        <a href="{{ project.url | url }}">{{ project.data.title }}</a>
-      </li>
-    {%- endfor -%}
+  <ul class="contact">
+    <li class="contact__item">
+      <a href={{ contact.email.url }} class="contact__link" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        <span>{{ contact.email.text }}</span>
+      </a>
+    </li>
+    <li class="contact__item">
+      <a href={{ contact.linkedin.url }} class="contact__link" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        <span>{{ contact.linkedin.text }}</span>
+      </a>
+    </li>
+    <li class="contact__item">
+      <a href={{ contact.twitter.url}} class="contact__link" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+        <span>{{ contact.twitter.text }}</span>
+      </a>
+    </li>
+    <li class="contact__item">
+      <a href={{ contact.github.url }} class="contact__link" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        <span>{{ contact.github.text }}</span>
+      </a>
+    </li>
+    <li class="contact__item">
+      <a href={{ contact.codepen.url }} class="contact__link">
+        <svg xmlns="http://www.w3.org/2000/svg" class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-codepen"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon><line x1="12" y1="22" x2="12" y2="15.5"></line><polyline points="22 8.5 12 15.5 2 8.5"></polyline><polyline points="2 15.5 12 8.5 22 15.5"></polyline><line x1="12" y1="2" x2="12" y2="8.5"></line></svg>
+        <span>{{ contact.codepen.text }}</span>
+      </a>
+    </li>
   </ul>
 </section>

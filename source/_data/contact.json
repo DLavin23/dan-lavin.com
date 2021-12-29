@@ -1,0 +1,22 @@
+{
+  "email": {
+    "text": "email",
+    "url": "mailto:dan@gobetweenlab.com"
+  },
+  "linkedin": {
+    "text": "LinkedIn",
+    "url": "https://www.linkedin.com/in/lavindan/"
+  },
+  "twitter": {
+    "text": "Twitter",
+    "url": "https://twitter.com/DanLavin"
+  },
+  "github": {
+    "text": "GitHub",
+    "url": "https://github.com/DLavin23"
+  },
+  "codepen": {
+    "text": "Codepen",
+    "url": "https://codepen.io/DLavin23"
+  }
+}

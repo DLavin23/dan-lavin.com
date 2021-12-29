@@ -2,7 +2,7 @@
 title: Roadmaps are dead, long live roadmaps!
 layout: layouts/post.njk
 tags: post
-publishedAt: May 19, 2019
+date: 2019-05-19
 ---
 
 Roadmaps are a loaded topic. Ask someone to describe one and you're likely to get a description that includes things like fixed dates, long lists of features, and fancy Gantt charts. You know, those mythical roadmaps that tell you exactly what will be delivered a year in advance. I'm not buying it.
